@@ -12,8 +12,8 @@ const career = [
   {
     marker: 'Now',
     company: 'Renesas Electronics',
-    role: 'Business Division Leader',
-    detail: 'Leading work across power management, product direction, strategy execution, and India-focused growth.',
+    role: '[Current title TBC]',
+    detail: 'Work across power management, product direction, strategy execution, and India-focused growth.',
   },
   {
     marker: '01',
@@ -29,21 +29,9 @@ const career = [
   },
   {
     marker: '03',
-    company: 'NextEra Energy',
-    role: 'MBA Intern · Renewable Energy Innovation & Strategy',
-    detail: 'Worked on questions at the intersection of energy transition, innovation, and market strategy.',
-  },
-  {
-    marker: '04',
-    company: 'AutoGrid',
-    role: 'Summer Intern · Solutions & Data Science',
-    detail: 'Worked on software and data-led approaches to modern energy systems.',
-  },
-  {
-    marker: '05',
-    company: 'Sparkz Inc. · Averda',
-    role: 'Business & Product Development · COO Office Operations',
-    detail: 'Early operating experience across product development, sustainability, and execution.',
+    company: 'Earlier operating roles',
+    role: 'NextEra Energy · AutoGrid · Sparkz · Averda',
+    detail: 'Experience across renewable energy strategy, energy software, product development, sustainability, and COO-office operations.',
   },
 ];
 
@@ -54,21 +42,17 @@ const education = [
 ];
 
 const recognitions = [
-  'K. C. Mahindra Scholarship for Graduate Studies, 2017',
-  'J. N. Tata Scholarship for Graduate Studies, 2017',
+  'K. C. Mahindra and J. N. Tata Scholarships for Graduate Studies, 2017',
   'Social Management Immersion Fellowship, Stanford, 2018',
-  'Certificate in Public Management and Social Innovation, Stanford, 2019',
-  'InSite Fellowship, 2019',
+  'Certificate in Public Management and Social Innovation, Stanford, 2019 · InSite Fellowship, 2019',
 ];
 
 const publishedWork = [
-  { group: 'Research', title: 'Global surveys of consumer sentiment during the coronavirus crisis', source: 'McKinsey · 2020', href: 'https://textile-future.com/archives/47053' },
-  { group: 'Research', title: 'Low Hanging Fruit: VC Investment Trends in Food Waste', source: 'Stanford EIPER · 2020', href: 'https://earth.stanford.edu/eiper/capstone/archives' },
-  { group: 'Research', title: 'Stanford experts discuss challenges and opportunities in disposing of waste', source: 'Stanford News · 2019', href: 'https://pangea.stanford.edu/news/stanford-experts-discuss-challenges-and-opportunities-disposing-waste' },
-  { group: 'Technical paper', title: 'Technical Challenges for Compressors and Steam Turbines for Efficient and Sustainable Operation in Mega Ethylene Plants', source: 'Texas A&M Asia Turbomachinery & Pump Symposium · 2016', href: 'https://oaktrust.library.tamu.edu/handle/1969.1/160303' },
-  { group: 'Patent', title: 'Emergency Shut-Off Device', source: 'Mitsubishi Heavy Industries · 2017', href: 'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2017104037' },
-  { group: 'Patent', title: 'Emergency Shutoff Device and Emergency Shutoff System', source: 'Mitsubishi Heavy Industries · 2016', href: 'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2016084140' },
-  { group: 'Writing', title: 'The clock stops ticking', source: 'Vox-populi, IIT Kanpur · 2016', href: 'https://voxiitk.com/the-clock-stops-ticking/' },
+  { group: 'Research', title: 'Global surveys of consumer sentiment during the coronavirus crisis', source: 'McKinsey · 2020', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-global-view-of-how-consumer-behavior-is-changing-amid-covid-19' },
+  { group: 'Research', title: 'Low Hanging Fruit: VC Investment Trends in Food Waste', source: 'Stanford EIPER · 2020', href: 'https://earth.stanford.edu/eiper' },
+  { group: 'Research', title: 'Stanford experts discuss challenges and opportunities in disposing of waste', source: 'Stanford Report · 2019', href: 'https://news.stanford.edu/stories/2019/04/reassessing-waste-not' },
+  { group: 'Technical paper', title: 'Compressors and steam turbines in mega ethylene plants', source: 'Texas A&M Asia Turbomachinery & Pump Symposium · 2016', href: 'https://oaktrust.library.tamu.edu/handle/1969.1/160303' },
+  { group: 'Patents', title: 'Emergency shut-off device and system', source: 'Mitsubishi Heavy Industries · 2016–17 · two publications', href: 'https://patents.google.com/patent/US10443513B2/en' },
 ];
 
 function AboutHeader() {
@@ -81,10 +65,30 @@ function AboutHeader() {
       <nav className="site-nav" aria-label="Primary navigation">
         <Link className="nav-active" href="/about">About</Link>
         <Link href="/#focus">Focus</Link>
-        <Link href="/#track-record">Track record</Link>
+        <Link href="/#selected-work">Work</Link>
         <Link className="nav-contact" href="/#contact">Contact <span aria-hidden="true">↗</span></Link>
       </nav>
     </header>
+  );
+}
+
+function RouteMap() {
+  return (
+    <div className="route-map" aria-label="A route from the Himalayan foothills through Japan and the United States to India">
+      <svg viewBox="0 0 640 520" fill="none">
+        <path className="route-grid-line" d="M76 115H565M76 260H565M76 405H565" />
+        <path className="route-path" d="M94 370C170 330 152 218 243 252C330 284 303 112 397 157C483 198 471 343 548 129" />
+        <circle className="route-node" cx="94" cy="370" r="5" />
+        <circle className="route-node" cx="243" cy="252" r="5" />
+        <circle className="route-node" cx="397" cy="157" r="5" />
+        <circle className="route-node" cx="548" cy="129" r="5" />
+      </svg>
+      <span className="route-label route-label-one">Himalayan foothills</span>
+      <span className="route-label route-label-two">Japan</span>
+      <span className="route-label route-label-three">United States</span>
+      <span className="route-label route-label-four">India</span>
+      <span className="route-caption">A personal geography / 01</span>
+    </div>
   );
 }
 
@@ -101,7 +105,7 @@ export default function AboutPage() {
           <p className="about-origin">From the foothills of the Himalayas to Japan, the United States, and India.</p>
         </div>
         <div className="about-hero-visual">
-          <div className="about-grid-mark" aria-hidden="true"><span /><span /><span /><span /></div>
+          <RouteMap />
           <figure className="about-portrait">
             <Image src="/abhay-profile.jpg" alt="Abhay Jain in a suit" width={400} height={400} priority />
             <figcaption><span>PROFILE / 01</span><span>ABHAY JAIN</span></figcaption>
@@ -116,7 +120,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-shell about-section about-career">
+      <section className="section-shell about-section about-career reveal-section">
         <div className="about-section-intro">
           <p className="eyebrow">02 / Experience</p>
           <h2>Operating<br />range.</h2>
@@ -136,7 +140,7 @@ export default function AboutPage() {
       </section>
 
       <section className="about-education">
-        <div className="section-shell about-section">
+        <div className="section-shell about-section reveal-section">
           <div className="about-section-intro">
             <p className="eyebrow">03 / Education</p>
             <h2>Technical<br />grounding.</h2>
@@ -156,7 +160,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-shell about-section about-recognition">
+      <section className="section-shell about-section about-recognition reveal-section">
         <div className="about-section-intro">
           <p className="eyebrow">04 / Recognition</p>
           <h2>Signals of<br />trust.</h2>
@@ -172,7 +176,7 @@ export default function AboutPage() {
       </section>
 
       <section className="about-work">
-        <div className="section-shell about-section">
+        <div className="section-shell about-section reveal-section">
           <div className="about-section-intro about-work-intro">
             <p className="eyebrow">05 / Publications & patents</p>
             <h2>Selected<br />work.</h2>
@@ -192,13 +196,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-shell about-section about-beyond">
+      <section className="section-shell about-section about-beyond reveal-section">
         <div className="about-section-intro">
           <p className="eyebrow">06 / Beyond work</p>
           <h2>Keep a wider<br />view.</h2>
         </div>
         <div className="beyond-copy">
-          <p>Abhay has lived and worked across India, Japan, and the United States. Outside formal roles, his interests include table tennis, pool, golf, road trips, and dance.</p>
+          <p>Raised in the Himalayan foothills, Abhay lived in Japan for four years before moving to the United States for graduate study. Outside formal roles, his interests include table tennis, pool, golf, road trips, and dance.</p>
           <p className="beyond-caption">Personal detail, kept in proportion.</p>
         </div>
       </section>
@@ -211,12 +215,16 @@ export default function AboutPage() {
           </div>
           <div className="contact-action">
             <p>For advisory, operating, semiconductor ecosystem, or institutional conversations.</p>
-            <a className="button button-light" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            <div className="contact-links">
+              <span className="contact-placeholder">Email [TBC]</span>
+              <a className="button button-light" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
       </section>
 
       <footer className="site-footer section-shell">
+        <Link href="/">← Home</Link>
         <span>© {new Date().getFullYear()} Abhay Jain</span>
         <span>Executive profile / abhayjain.net</span>
       </footer>

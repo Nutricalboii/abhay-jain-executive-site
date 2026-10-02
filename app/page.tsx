@@ -2,32 +2,32 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const focusAreas = [
-  'India-focused power-management and embedded analog semiconductor businesses',
-  'Product definition, system applications, and commercial strategy',
-  'Cross-functional execution across India and global teams',
-  'Ecosystem partnerships across automotive, industrial, and energy markets',
+  'Power-management and embedded analog businesses in India',
+  'Product definition and commercial strategy',
+  'Execution across India and global teams',
+  'Partnerships across automotive, industrial, and energy markets',
 ];
 
 const trackRecord = [
   {
     number: '01',
-    label: 'Scale',
-    detail: 'Strategy execution and process improvement inside a large power-business portfolio.',
+    label: 'Consulting',
+    detail: 'Management consulting at McKinsey across technology, energy, and operations.',
   },
   {
     number: '02',
-    label: 'Range',
-    detail: 'Experience spanning engineering, commercialization, consulting, and product strategy.',
+    label: 'Industry',
+    detail: 'Engineering and sales at Mitsubishi Heavy Industries across compressors and steam turbines.',
   },
   {
     number: '03',
-    label: 'Perspective',
-    detail: 'Operating experience across semiconductors, energy, manufacturing, and technology.',
+    label: 'Operating range',
+    detail: 'Experience spanning semiconductors, energy, software, manufacturing, and sustainability.',
   },
   {
     number: '04',
-    label: 'Leadership',
-    detail: 'Multi-stakeholder work across India, Japan, the United States, and global teams.',
+    label: 'Perspective',
+    detail: 'Work across India, Japan, the United States, and global teams.',
   },
 ];
 
@@ -36,55 +36,60 @@ const selectedWork = [
     type: 'Research',
     title: 'Global surveys of consumer sentiment during the coronavirus crisis',
     context: 'McKinsey research tracking how expectations, incomes, and behavior changed across markets.',
-    href: 'https://textile-future.com/archives/47053',
+    href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-global-view-of-how-consumer-behavior-is-changing-amid-covid-19',
+  },
+  {
+    type: 'Research',
+    title: 'Low Hanging Fruit: VC investment trends in food waste',
+    context: 'Stanford EIPER research on capital, waste systems, and emerging opportunities.',
+    href: 'https://earth.stanford.edu/eiper',
   },
   {
     type: 'Technical paper',
-    title: 'Technical challenges for compressors and steam turbines',
-    context: 'A technical study on efficiency, reliability, and long-term operation in mega ethylene plants.',
+    title: 'Compressors and steam turbines in mega ethylene plants',
+    context: 'A technical study on efficient and sustainable operation in complex industrial systems.',
     href: 'https://oaktrust.library.tamu.edu/handle/1969.1/160303',
   },
   {
     type: 'Patent',
     title: 'Emergency shut-off device and system',
-    context: 'Co-developed safety mechanics for protecting steam-turbine systems under abnormal conditions.',
-    href: 'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2016084140',
+    context: 'Two Mitsubishi Heavy Industries patent publications focused on industrial safety.',
+    href: 'https://patents.google.com/patent/US10443513B2/en',
   },
 ];
 
-function OperatingField() {
+function SignalField() {
   return (
-    <div className="operating-field" aria-hidden="true">
-      <div className="field-label field-label-top">SYSTEMS / 01</div>
-      <div className="field-label field-label-bottom">SIGNAL · SCALE · EXECUTION</div>
-      <svg className="field-svg" viewBox="0 0 620 620" fill="none">
-        <defs>
-          <linearGradient id="fieldGradient" x1="100" y1="40" x2="520" y2="580" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#D5A36A" />
-            <stop offset="0.52" stopColor="#6D8490" />
-            <stop offset="1" stopColor="#17252A" />
-          </linearGradient>
-          <radialGradient id="fieldGlow" cx="0" cy="0" r="1" gradientTransform="translate(312 308) rotate(90) scale(214)">
-            <stop stopColor="#D5A36A" stopOpacity="0.24" />
-            <stop offset="1" stopColor="#D5A36A" stopOpacity="0" />
-          </radialGradient>
-        </defs>
-        <circle cx="312" cy="308" r="214" fill="url(#fieldGlow)" />
-        <circle className="field-orbit field-orbit-one" cx="312" cy="308" r="172" stroke="url(#fieldGradient)" strokeWidth="1.2" />
-        <circle className="field-orbit field-orbit-two" cx="312" cy="308" r="116" stroke="#D5A36A" strokeOpacity="0.48" strokeWidth="1" strokeDasharray="3 11" />
-        <circle cx="312" cy="308" r="7" fill="#D5A36A" />
-        <circle cx="312" cy="308" r="15" stroke="#D5A36A" strokeOpacity="0.55" />
-        <path className="field-line" d="M64 168H222L312 308L454 148H570" stroke="#6D8490" strokeOpacity="0.58" />
-        <path className="field-line field-line-delay" d="M86 468H232L312 308L408 448H548" stroke="#D5A36A" strokeOpacity="0.44" />
-        <path d="M312 54V562M58 308H566" stroke="#17252A" strokeOpacity="0.1" />
-        <circle cx="222" cy="168" r="4" fill="#6D8490" />
-        <circle cx="454" cy="148" r="4" fill="#D5A36A" />
-        <circle cx="232" cy="468" r="4" fill="#D5A36A" />
-        <circle cx="408" cy="448" r="4" fill="#6D8490" />
-        <path d="M312 308L392 228" stroke="#D5A36A" strokeWidth="2" />
-        <path d="M392 228h-28M392 228v28" stroke="#D5A36A" strokeWidth="2" />
+    <div className="signal-field" aria-hidden="true">
+      <div className="field-label field-label-top">SIGNAL / 01</div>
+      <div className="field-label field-label-bottom">POWER · SYSTEMS · SCALE</div>
+      <svg className="field-svg" viewBox="0 0 620 620" fill="none" role="presentation">
+        <path className="field-crosshair" d="M48 310H572M310 48V572" />
+        <path className="field-wave field-wave-noisy" d="M0 311C36 311 34 250 69 250C104 250 99 371 133 371C166 371 162 276 198 276C232 276 234 343 267 343C301 343 304 269 338 269C371 269 374 350 407 350C440 350 445 286 479 286C512 286 514 325 550 325C580 325 583 310 620 310" />
+        <path className="field-wave field-wave-clean" d="M0 310C108 310 148 310 206 310C262 310 284 309 344 310C410 311 463 310 620 310" />
+        <circle className="field-node node-one" cx="198" cy="276" r="5" />
+        <circle className="field-node node-two" cx="407" cy="350" r="5" />
+        <circle className="field-core" cx="310" cy="310" r="8" />
+        <circle className="field-core-ring" cx="310" cy="310" r="22" />
       </svg>
-      <div className="field-coordinate">12°58′N / 77°35′E</div>
+      <div className="field-coordinate">POWER / 00.00 — 01.00</div>
+    </div>
+  );
+}
+
+function SignalThread() {
+  return (
+    <div className="signal-thread" aria-hidden="true">
+      <svg viewBox="0 0 120 2200" preserveAspectRatio="none" fill="none" role="presentation">
+        <path className="thread-guide" d="M60 0V2200" />
+        <path className="thread-path" pathLength="1" d="M60 0C60 90 22 120 60 220C98 320 24 394 60 505C99 625 30 735 60 845C92 965 27 1080 60 1200C93 1320 29 1434 60 1550C92 1670 30 1810 60 1925C75 1980 60 2084 60 2200" />
+        <circle className="thread-dot dot-one" cx="60" cy="240" r="5" />
+        <circle className="thread-dot dot-two" cx="60" cy="870" r="5" />
+        <circle className="thread-dot dot-three" cx="60" cy="1556" r="5" />
+      </svg>
+      <span className="thread-label thread-label-one">01</span>
+      <span className="thread-label thread-label-two">02</span>
+      <span className="thread-label thread-label-three">03</span>
     </div>
   );
 }
@@ -92,6 +97,7 @@ function OperatingField() {
 export default function Home() {
   return (
     <main>
+      <SignalThread />
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Abhay Jain home">
           <span className="wordmark-mark">AJ</span>
@@ -100,18 +106,18 @@ export default function Home() {
         <nav className="site-nav" aria-label="Primary navigation">
           <Link href="/about">About</Link>
           <a href="#focus">Focus</a>
-          <a href="#track-record">Track record</a>
+          <a href="#selected-work">Work</a>
           <a className="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
         </nav>
       </header>
 
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
-          <p className="eyebrow">Executive profile <span>—</span> Bengaluru / India</p>
+          <p className="eyebrow">Executive profile <span>—</span> India / global</p>
           <h1>Abhay<br /><em>Jain</em></h1>
-          <p className="hero-role">Business Division Leader · Renesas Electronics</p>
+          <p className="hero-role">[Current title TBC] · Renesas Electronics</p>
           <p className="hero-positioning">
-            Works across power-management semiconductors, product direction, and execution in India and global markets.
+            Business and strategy leader across power-management semiconductors, product strategy, and ecosystem development.
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
@@ -119,7 +125,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-visual">
-          <OperatingField />
+          <SignalField />
           <figure className="portrait-frame">
             <Image src="/abhay-profile.jpg" alt="Abhay Jain in a suit" width={400} height={400} priority />
             <figcaption><span>01</span> Strategy / systems / execution</figcaption>
@@ -128,7 +134,7 @@ export default function Home() {
         <div className="hero-note"><span>Scroll to explore</span><span className="hero-note-line" /></div>
       </section>
 
-      <section id="focus" className="section-shell section-grid">
+      <section id="focus" className="section-shell section-grid reveal-section">
         <div className="section-intro">
           <p className="eyebrow">01 / Current focus</p>
           <h2>Where the work is now.</h2>
@@ -143,7 +149,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="track-record" className="section-shell section-grid track-section">
+      <section id="track-record" className="section-shell section-grid track-section reveal-section">
         <div className="section-intro">
           <p className="eyebrow">02 / Track record</p>
           <h2>Useful range.<br />Clear ownership.</h2>
@@ -161,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="selected-work" className="section-shell work-section">
+      <section id="selected-work" className="section-shell work-section reveal-section">
         <div className="section-heading-row">
           <div>
             <p className="eyebrow">03 / Selected work</p>
@@ -182,8 +188,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-shell affiliations-section">
-        <div className="section-grid">
+      <section className="section-shell affiliations-section reveal-section">
+        <div className="section-grid section-grid-tight">
           <div className="section-intro">
             <p className="eyebrow">04 / Roles & affiliations</p>
             <h2>Built across<br />different systems.</h2>
@@ -213,7 +219,10 @@ export default function Home() {
           </div>
           <div className="contact-action">
             <p>For advisory, operating, semiconductor ecosystem, or institutional conversations.</p>
-            <a className="button button-light" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            <div className="contact-links">
+              <span className="contact-placeholder">Email [TBC]</span>
+              <a className="button button-light" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
       </section>
