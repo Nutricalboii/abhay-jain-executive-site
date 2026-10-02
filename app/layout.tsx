@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
-import { Instrument_Sans, Newsreader } from 'next/font/google';
+import { Fraunces, Instrument_Sans } from 'next/font/google';
 import './globals.css';
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+  weight: ['300', '400', '500', '600'],
+});
 
 const instrumentSans = Instrument_Sans({
   subsets: ['latin'],
@@ -8,11 +15,6 @@ const instrumentSans = Instrument_Sans({
   display: 'swap',
 });
 
-const newsreader = Newsreader({
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abhayjain.net'),
@@ -35,8 +37,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${instrumentSans.variable} ${newsreader.variable}`}>{children}</body>
+    <html lang="en" className={`${fraunces.variable} ${instrumentSans.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

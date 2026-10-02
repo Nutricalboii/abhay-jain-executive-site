@@ -1,78 +1,111 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+/* ── data ────────────────────────────────────────────────────────────────── */
 const focusAreas = [
   'Power-management and embedded analog businesses in India',
-  'Product definition and commercial strategy',
-  'Execution across India and global teams',
-  'Partnerships across automotive, industrial, and energy markets',
+  'Product definition, portfolio strategy, and commercial execution',
+  'Cross-functional leadership across India and global teams',
+  'Ecosystem partnerships in automotive, industrial, and energy markets',
 ];
 
 const trackRecord = [
   {
-    number: '01',
-    label: 'Consulting',
-    detail: 'Management consulting at McKinsey across technology, energy, and operations.',
+    label: 'Strategy & Execution',
+    detail:
+      'Led strategy, process transformation, and commercial execution for a large-scale power-management semiconductor business.',
   },
   {
-    number: '02',
-    label: 'Industry',
-    detail: 'Engineering and sales at Mitsubishi Heavy Industries across compressors and steam turbines.',
+    label: 'Management Consulting',
+    detail:
+      'Delivered engagements at McKinsey & Company across technology, energy, and operations — working across markets in Asia and North America.',
   },
   {
-    number: '03',
-    label: 'Operating range',
-    detail: 'Experience spanning semiconductors, energy, software, manufacturing, and sustainability.',
+    label: 'Engineering & Sales',
+    detail:
+      'Combined technical engineering with commercial responsibility at Mitsubishi Heavy Industries — compressors and steam turbines for complex industrial systems.',
   },
   {
-    number: '04',
-    label: 'Perspective',
-    detail: 'Work across India, Japan, the United States, and global teams.',
+    label: 'Operating Range',
+    detail:
+      'Worked across semiconductors, energy, sustainability, and manufacturing. Experience spanning India, Japan, the United States, and global organisations.',
   },
 ];
 
 const selectedWork = [
   {
     type: 'Research',
-    title: 'Global surveys of consumer sentiment during the coronavirus crisis',
-    context: 'McKinsey research tracking how expectations, incomes, and behavior changed across markets.',
+    title: 'Global consumer sentiment during COVID-19',
+    context: 'McKinsey research tracking behavioral shifts across markets during a period of acute uncertainty.',
     href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-global-view-of-how-consumer-behavior-is-changing-amid-covid-19',
   },
   {
     type: 'Research',
-    title: 'Low Hanging Fruit: VC investment trends in food waste',
-    context: 'Stanford EIPER research on capital, waste systems, and emerging opportunities.',
+    title: 'VC investment trends in food waste',
+    context: 'Stanford EIPER research on capital flows, waste systems, and emerging market opportunities.',
     href: 'https://earth.stanford.edu/eiper',
   },
   {
     type: 'Technical paper',
     title: 'Compressors and steam turbines in mega ethylene plants',
-    context: 'A technical study on efficient and sustainable operation in complex industrial systems.',
+    context: 'Technical study on efficient and sustainable operation of industrial rotating equipment.',
     href: 'https://oaktrust.library.tamu.edu/handle/1969.1/160303',
   },
   {
     type: 'Patent',
     title: 'Emergency shut-off device and system',
-    context: 'Two Mitsubishi Heavy Industries patent publications focused on industrial safety.',
+    context: 'Two Mitsubishi Heavy Industries patent publications in industrial safety systems.',
     href: 'https://patents.google.com/patent/US10443513B2/en',
   },
 ];
 
+const affiliations = {
+  current: ['Renesas Electronics'],
+  earlier: ['McKinsey & Company', 'Mitsubishi Heavy Industries', 'NextEra Energy'],
+  education: ['Stanford University', 'IIT Kanpur'],
+};
+
+/* ── SVG graphics ────────────────────────────────────────────────────────── */
 function SignalField() {
   return (
     <div className="signal-field" aria-hidden="true">
-      <div className="field-label field-label-top">SIGNAL / 01</div>
-      <div className="field-label field-label-bottom">POWER · SYSTEMS · SCALE</div>
-      <svg className="field-svg" viewBox="0 0 620 620" fill="none" role="presentation">
-        <path className="field-crosshair" d="M48 310H572M310 48V572" />
-        <path className="field-wave field-wave-noisy" d="M0 311C36 311 34 250 69 250C104 250 99 371 133 371C166 371 162 276 198 276C232 276 234 343 267 343C301 343 304 269 338 269C371 269 374 350 407 350C440 350 445 286 479 286C512 286 514 325 550 325C580 325 583 310 620 310" />
-        <path className="field-wave field-wave-clean" d="M0 310C108 310 148 310 206 310C262 310 284 309 344 310C410 311 463 310 620 310" />
-        <circle className="field-node node-one" cx="198" cy="276" r="5" />
-        <circle className="field-node node-two" cx="407" cy="350" r="5" />
-        <circle className="field-core" cx="310" cy="310" r="8" />
-        <circle className="field-core-ring" cx="310" cy="310" r="22" />
+      <svg viewBox="0 0 640 640" fill="none">
+        {/* subtle grid */}
+        <path className="field-grid-x" d="M0 160H640M0 320H640M0 480H640" />
+        <path className="field-crosshair" d="M56 320H584M320 56V584" />
+
+        {/* noisy waveform → clean regulated line */}
+        <path
+          className="field-wave-raw"
+          d="M0 321C32 321 30 258 62 258C93 258 90 382 121 382C151 382 148 286 180 286C210 286 213 355 243 355C273 355 275 274 306 274C337 274 339 360 370 360C400 360 403 291 433 291C463 291 465 330 495 330C523 330 525 320 555 320C580 320 590 320 640 320"
+        />
+        <path
+          className="field-wave-clean"
+          d="M0 320C90 320 130 320 200 320C270 320 295 319 360 320C430 321 480 320 640 320"
+        />
+
+        {/* nodes */}
+        <circle className="field-node" cx="180" cy="286" r="4" />
+        <circle className="field-node" cx="370" cy="360" r="4" />
+        <circle className="field-core-dot" cx="320" cy="320" r="6" />
+        <circle
+          style={{ stroke: 'var(--copper)', strokeOpacity: '.4', strokeWidth: '1', fill: 'none' }}
+          cx="320"
+          cy="320"
+          r="18"
+        />
+        <circle
+          style={{ stroke: 'var(--copper)', strokeOpacity: '.2', strokeWidth: '.8', fill: 'none' }}
+          cx="320"
+          cy="320"
+          r="34"
+        />
       </svg>
-      <div className="field-coordinate">POWER / 00.00 — 01.00</div>
+
+      <span className="field-label field-label-tl">SIGNAL / 01</span>
+      <span className="field-label field-label-br field-label-accent">
+        POWER · SYSTEMS · SCALE
+      </span>
     </div>
   );
 }
@@ -80,157 +113,290 @@ function SignalField() {
 function SignalThread() {
   return (
     <div className="signal-thread" aria-hidden="true">
-      <svg viewBox="0 0 120 2200" preserveAspectRatio="none" fill="none" role="presentation">
-        <path className="thread-guide" d="M60 0V2200" />
-        <path className="thread-path" pathLength="1" d="M60 0C60 90 22 120 60 220C98 320 24 394 60 505C99 625 30 735 60 845C92 965 27 1080 60 1200C93 1320 29 1434 60 1550C92 1670 30 1810 60 1925C75 1980 60 2084 60 2200" />
-        <circle className="thread-dot dot-one" cx="60" cy="240" r="5" />
-        <circle className="thread-dot dot-two" cx="60" cy="870" r="5" />
-        <circle className="thread-dot dot-three" cx="60" cy="1556" r="5" />
+      <svg viewBox="0 0 40 2000" preserveAspectRatio="none" fill="none">
+        <path className="thread-rail" d="M20 0V2000" />
+        <path
+          className="thread-path"
+          pathLength="1"
+          d="M20 0C20 80 6 108 20 200C34 292 8 370 20 462C34 564 7 658 20 750C33 842 9 932 20 1024C31 1116 8 1208 20 1300C32 1392 9 1480 20 1580C31 1674 20 1870 20 2000"
+        />
+        <circle className="thread-pip" cx="20" cy="218" r="4" />
+        <circle className="thread-pip" cx="20" cy="784" r="4" />
+        <circle className="thread-pip" cx="20" cy="1390" r="4" />
       </svg>
-      <span className="thread-label thread-label-one">01</span>
-      <span className="thread-label thread-label-two">02</span>
-      <span className="thread-label thread-label-three">03</span>
+      <span className="thread-num thread-num-1">01</span>
+      <span className="thread-num thread-num-2">02</span>
+      <span className="thread-num thread-num-3">03</span>
     </div>
   );
 }
 
+/* ── page ────────────────────────────────────────────────────────────────── */
 export default function Home() {
   return (
     <main>
       <SignalThread />
+
+      {/* ── HEADER ─────────────────────────────────────────────────── */}
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Abhay Jain home">
-          <span className="wordmark-mark">AJ</span>
+        <a className="wordmark" href="#top" aria-label="Abhay Jain — home">
+          <span className="wordmark-badge">AJ</span>
           <span>Abhay Jain</span>
         </a>
-        <nav className="site-nav" aria-label="Primary navigation">
+        <nav className="site-nav" aria-label="Primary">
           <Link href="/about">About</Link>
+          <span className="nav-dot" aria-hidden="true">·</span>
           <a href="#focus">Focus</a>
-          <a href="#selected-work">Work</a>
-          <a className="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+          <span className="nav-dot" aria-hidden="true">·</span>
+          <a href="#work">Work</a>
+          <span className="nav-dot" aria-hidden="true">·</span>
+          <a href="#contact" className="nav-cta">
+            Contact <span aria-hidden="true">↗</span>
+          </a>
         </nav>
       </header>
 
-      <section id="top" className="hero section-shell">
+      {/* ── HERO ───────────────────────────────────────────────────── */}
+      <section id="top" className="hero wrap">
         <div className="hero-copy">
-          <p className="eyebrow">Executive profile <span>—</span> India / global</p>
-          <h1>Abhay<br /><em>Jain</em></h1>
-          <p className="hero-role">[Current title TBC] · Renesas Electronics</p>
-          <p className="hero-positioning">
-            Business and strategy leader across power-management semiconductors, product strategy, and ecosystem development.
+          <p className="eyebrow">
+            <span className="eyebrow-line" aria-hidden="true" />
+            Executive profile
+            <span className="eyebrow-muted">— India / Global</span>
           </p>
+
+          <h1 className="hero-name">
+            Abhay<br />
+            <em>Jain</em>
+          </h1>
+
+          <p className="hero-role">
+            Business Division Leader
+            <span className="hero-role-sep" aria-hidden="true">·</span>
+            Renesas Electronics
+          </p>
+
+          <p className="hero-statement">
+            Business and strategy leader across power-management semiconductors,
+            product direction, and ecosystem development.
+          </p>
+
           <div className="hero-actions">
-            <a className="button button-dark" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
-            <a className="text-link" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a className="btn btn-dark" href="#contact">
+              Start a conversation
+              <span className="btn-icon" aria-hidden="true">↗</span>
+            </a>
+            <a
+              className="btn btn-outline"
+              href="https://www.linkedin.com/in/abhay-jain-10/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+              <span className="btn-icon" aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
+
         <div className="hero-visual">
           <SignalField />
-          <figure className="portrait-frame">
-            <Image src="/abhay-profile.jpg" alt="Abhay Jain in a suit" width={400} height={400} priority />
-            <figcaption><span>01</span> Strategy / systems / execution</figcaption>
+          <figure className="portrait-wrap">
+            <Image
+              src="/abhay-profile.jpg"
+              alt="Abhay Jain"
+              width={480}
+              height={640}
+              className="portrait-img"
+              priority
+            />
+            <figcaption className="portrait-cap">
+              <span>01</span>
+              <span>Strategy · Systems · Execution</span>
+            </figcaption>
           </figure>
         </div>
-        <div className="hero-note"><span>Scroll to explore</span><span className="hero-note-line" /></div>
+
+        <p className="hero-scroll" aria-hidden="true">
+          <span className="hero-scroll-line" />
+          Scroll to explore
+        </p>
       </section>
 
-      <section id="focus" className="section-shell section-grid reveal-section">
-        <div className="section-intro">
-          <p className="eyebrow">01 / Current focus</p>
-          <h2>Where the work is now.</h2>
-        </div>
-        <div className="focus-list">
-          {focusAreas.map((area, index) => (
-            <div className="focus-item" key={area}>
-              <span className="item-index">0{index + 1}</span>
-              <p>{area}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ── CURRENT FOCUS ──────────────────────────────────────────── */}
+      <section id="focus" className="section">
+        <div className="wrap section-grid reveal">
+          <div>
+            <p className="section-number">01</p>
+            <p className="section-label">Current Focus</p>
+            <h2 className="section-h2">
+              Where<br />
+              the work<br />
+              <em>is now.</em>
+            </h2>
+            <p className="section-sub">
+              A filter for relevant inbound. These are the active domains.
+            </p>
+          </div>
 
-      <section id="track-record" className="section-shell section-grid track-section reveal-section">
-        <div className="section-intro">
-          <p className="eyebrow">02 / Track record</p>
-          <h2>Useful range.<br />Clear ownership.</h2>
-        </div>
-        <div className="track-list">
-          {trackRecord.map((item) => (
-            <article className="track-item" key={item.number}>
-              <span className="item-index">{item.number}</span>
-              <div>
-                <h3>{item.label}</h3>
-                <p>{item.detail}</p>
+          <div className="focus-list">
+            {focusAreas.map((area, i) => (
+              <div className="focus-item" key={area}>
+                <span className="focus-idx">0{i + 1}</span>
+                <p className="focus-text">{area}</p>
               </div>
-            </article>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      <section id="selected-work" className="section-shell work-section reveal-section">
-        <div className="section-heading-row">
+      {/* ── TRACK RECORD ───────────────────────────────────────────── */}
+      <section id="track" className="section section-alt">
+        <div className="wrap section-grid reveal">
           <div>
-            <p className="eyebrow">03 / Selected work</p>
-            <h2>Proof, not volume.</h2>
+            <p className="section-number">02</p>
+            <p className="section-label">Track Record</p>
+            <h2 className="section-h2">
+              Useful<br />
+              range.<br />
+              <em>Clear ownership.</em>
+            </h2>
           </div>
-          <p className="section-aside">A small set of work that shows the operating range.</p>
-        </div>
-        <div className="work-list">
-          {selectedWork.map((work, index) => (
-            <a className="work-item" key={work.title} href={work.href} target="_blank" rel="noreferrer">
-              <span className="item-index">0{index + 1}</span>
-              <span className="work-type">{work.type}</span>
-              <span className="work-title">{work.title}</span>
-              <span className="work-context">{work.context}</span>
-              <span className="work-view">View <span aria-hidden="true">↗</span></span>
-            </a>
-          ))}
-        </div>
-      </section>
 
-      <section className="section-shell affiliations-section reveal-section">
-        <div className="section-grid section-grid-tight">
-          <div className="section-intro">
-            <p className="eyebrow">04 / Roles & affiliations</p>
-            <h2>Built across<br />different systems.</h2>
-          </div>
-          <div className="affiliations-copy">
-            <div className="affiliation-group">
-              <p className="affiliation-label">Current</p>
-              <p>Renesas Electronics</p>
-            </div>
-            <div className="affiliation-group">
-              <p className="affiliation-label">Earlier</p>
-              <p>McKinsey & Company<br />Mitsubishi Heavy Industries<br />NextEra Energy<br />AutoGrid · Sparkz · Averda</p>
-            </div>
-            <div className="affiliation-group">
-              <p className="affiliation-label">Education</p>
-              <p>Stanford University<br />Indian Institute of Technology, Kanpur</p>
-            </div>
+          <div className="track-list">
+            {trackRecord.map((item, i) => (
+              <article className="track-item" key={item.label}>
+                <span className="track-marker">0{i + 1}</span>
+                <div>
+                  <p className="track-label">{item.label}</p>
+                  <p className="track-detail">{item.detail}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* ── SELECTED WORK ──────────────────────────────────────────── */}
+      <section id="work" className="section">
+        <div className="wrap reveal">
+          <div className="work-header">
+            <div>
+              <p className="section-label">03 · Selected Work</p>
+              <h2 className="section-h2">
+                Proof,<br />
+                <em>not volume.</em>
+              </h2>
+            </div>
+            <p className="work-aside">
+              A small set of work that shows the operating range. Curated, not exhaustive.
+            </p>
+          </div>
+
+          <div className="work-list">
+            {selectedWork.map((work, i) => (
+              <a
+                className="work-item"
+                key={work.title}
+                href={work.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`View: ${work.title}`}
+              >
+                <span className="work-num">0{i + 1}</span>
+                <span className="work-type">{work.type}</span>
+                <span className="work-title">{work.title}</span>
+                <span className="work-context">{work.context}</span>
+                <span className="work-view">View <span aria-hidden="true">↗</span></span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── AFFILIATIONS ───────────────────────────────────────────── */}
+      <section className="section section-alt">
+        <div className="wrap section-grid reveal">
+          <div>
+            <p className="section-number">04</p>
+            <p className="section-label">Roles & Affiliations</p>
+            <h2 className="section-h2">
+              Built<br />
+              across<br />
+              <em>systems.</em>
+            </h2>
+          </div>
+
+          <div className="aff-grid">
+            <div className="aff-block">
+              <p className="aff-head">Current</p>
+              <ul className="aff-list">
+                {affiliations.current.map((a) => (
+                  <li key={a}>{a}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="aff-block">
+              <p className="aff-head">Earlier</p>
+              <ul className="aff-list">
+                {affiliations.earlier.map((a) => (
+                  <li key={a}>{a}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="aff-block">
+              <p className="aff-head">Education</p>
+              <ul className="aff-list">
+                {affiliations.education.map((a) => (
+                  <li key={a}>{a}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CONTACT ────────────────────────────────────────────────── */}
       <section id="contact" className="contact-section">
-        <div className="section-shell contact-inner">
+        <div className="wrap contact-inner">
           <div>
-            <p className="eyebrow eyebrow-light">05 / Contact</p>
-            <h2>Relevant conversation?<br /><em>Let’s begin there.</em></h2>
+            <p className="eyebrow contact-eyebrow">
+              <span className="eyebrow-line" aria-hidden="true" />
+              05 · Contact
+            </p>
+            <h2 className="contact-h2">
+              Relevant<br />
+              conversation?<br />
+              <em>Begin there.</em>
+            </h2>
           </div>
-          <div className="contact-action">
-            <p>For advisory, operating, semiconductor ecosystem, or institutional conversations.</p>
-            <div className="contact-links">
-              <span className="contact-placeholder">Email [TBC]</span>
-              <a className="button button-light" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+
+          <div className="contact-side">
+            <p className="contact-desc">
+              For advisory, operating, semiconductor ecosystem, or
+              institutional conversations. One or two methods only.
+            </p>
+            <div className="contact-actions">
+              <a
+                className="contact-link contact-link-primary"
+                href="https://www.linkedin.com/in/abhay-jain-10/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Connect on LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+              <Link className="contact-link contact-link-secondary" href="/about">
+                View full profile
+              </Link>
             </div>
           </div>
         </div>
-      </section>
 
-      <footer className="site-footer section-shell">
-        <span>© {new Date().getFullYear()} Abhay Jain</span>
-        <span>Executive profile / abhayjain.net</span>
-      </footer>
+        <footer className="wrap site-footer footer-dark">
+          <span>© {new Date().getFullYear()} Abhay Jain</span>
+          <Link href="/about">About</Link>
+          <span>abhayjain.net</span>
+        </footer>
+      </section>
     </main>
   );
 }
