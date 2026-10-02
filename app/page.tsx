@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 const focusAreas = [
   'India-focused power-management and embedded analog semiconductor businesses',
   'Product definition, system applications, and commercial strategy',
@@ -95,9 +98,9 @@ export default function Home() {
           <span>Abhay Jain</span>
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
+          <Link href="/about">About</Link>
           <a href="#focus">Focus</a>
           <a href="#track-record">Track record</a>
-          <a href="#selected-work">Selected work</a>
           <a className="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
         </nav>
       </header>
@@ -222,4 +225,3 @@ export default function Home() {
     </main>
   );
 }
-import Image from 'next/image';
