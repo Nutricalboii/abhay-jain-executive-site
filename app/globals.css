@@ -489,6 +489,7 @@ button:focus-visible {
   border-bottom: 1px solid var(--ink-08);
   transition: background var(--dur-fast) var(--ease-out);
 }
+.focus-item > * { min-width: 0; }
 .focus-item:hover { background: var(--paper-deep); margin-inline: -20px; padding-inline: 20px; }
 .focus-idx {
   font-family: var(--font-mono);
@@ -509,11 +510,12 @@ button:focus-visible {
 .track-list { border-top: 1px solid var(--ink-15); }
 .track-item {
   display: grid;
-  grid-template-columns: 48px 1fr;
+  grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
   gap: 20px;
   padding-block: 30px;
   border-bottom: 1px solid var(--ink-08);
 }
+.track-item > * { min-width: 0; }
 .track-marker {
   padding-top: 6px;
   font-family: var(--font-mono);
@@ -534,7 +536,7 @@ button:focus-visible {
   font-size: 15px;
   line-height: 1.55;
   color: var(--ink-60);
-  max-width: 500px;
+  max-width: 620px;
 }
 
 /* ─── SELECTED WORK ─────────────────────────────────────────────────────────── */
@@ -564,6 +566,7 @@ button:focus-visible {
   color: inherit;
   transition: background var(--dur-fast) var(--ease-out), padding var(--dur-med) var(--ease-out);
 }
+.work-item > * { min-width: 0; }
 .work-item:hover {
   background: var(--paper-deep);
   padding-inline: 16px;
@@ -576,8 +579,9 @@ button:focus-visible {
   font-weight: 400;
   letter-spacing: -.025em;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
-.work-context { font-size: 12px; line-height: 1.4; color: var(--ink-60); }
+.work-context { font-size: 12px; line-height: 1.4; color: var(--ink-60); overflow-wrap: anywhere; }
 .work-view {
   justify-self: end;
   font-family: var(--font-sans);
@@ -920,7 +924,7 @@ button:focus-visible {
   }
 }
 @keyframes revealUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 1; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -958,6 +962,7 @@ button:focus-visible {
   .pub-title { grid-column: 2; grid-row: 2; font-size: 17px; }
   .pub-src { grid-column: 2; grid-row: 3; margin-top: 4px; }
   .pub-view { grid-column: 3; grid-row: 1 / span 3; }
+  .track-item { grid-template-columns: minmax(120px, 150px) minmax(0, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -971,6 +976,8 @@ button:focus-visible {
   .work-header { flex-direction: column; gap: 16px; }
   .contact-h2 { font-size: 42px; }
   .about-h1 { font-size: clamp(52px, 15vw, 80px); }
+  .track-item { grid-template-columns: 1fr; gap: 10px; }
+  .track-marker { padding-top: 0; }
 }
 
 /* ── logo grid (About page) ─────────────────────────────────────────────── */
