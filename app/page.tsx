@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { publications, socialLinks, sourceCopy } from './source-data';
 
 /* ── real data from source sites ─────────────────────────────────────────── */
 const focusAreas = [
@@ -31,32 +32,10 @@ const trackRecord = [
   },
 ];
 
-const selectedWork = [
-  {
-    type: 'Research',
-    title: 'Global surveys of consumer sentiment during the coronavirus crisis',
-    source: 'McKinsey & Company · 2020',
-    href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-global-view-of-how-consumer-behavior-is-changing-amid-covid-19',
-  },
-  {
-    type: 'Technical paper',
-    title: 'Technical Challenges for Compressors and Steam Turbines in Mega Ethylene Plants',
-    source: 'Texas A&M Turbomachinery Symposium · 2016',
-    href: 'https://oaktrust.library.tamu.edu/items/05594529-135c-421d-9e9b-1ca4e1ad9cce',
-  },
-  {
-    type: 'Patent',
-    title: 'Emergency Shutoff Device and System',
-    source: 'Mitsubishi Heavy Industries · 2016',
-    href: 'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2016084140',
-  },
-  {
-    type: 'Research',
-    title: 'Low Hanging Fruit: VC Investment Trends in Food Waste',
-    source: 'Stanford EIPER · 2020',
-    href: 'https://earth.stanford.edu/eiper',
-  },
-];
+const selectedWork = publications.map((item, index) => ({
+  ...item,
+  type: index > 3 ? 'Publication / patent' : index === 3 ? 'Technical paper' : 'Research',
+}));
 
 const affiliations = {
   current: ['Business & strategy'],
@@ -120,16 +99,18 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Abhay Jain — home">
           <span className="wordmark-badge">AJ</span>
-          <span>Abhay Jain</span>
+          <span>Business &amp; Strategy</span>
         </a>
         <nav className="site-nav" aria-label="Primary">
-          <Link href="/about">About</Link>
+          <Link href="/about-me">About</Link>
+          <span className="nav-dot" aria-hidden="true">·</span>
+          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
           <a href="#focus">Focus</a>
           <span className="nav-dot" aria-hidden="true">·</span>
           <a href="#track-record">Track Record</a>
           <span className="nav-dot" aria-hidden="true">·</span>
-          <a href="#contact" className="nav-cta">Contact <span aria-hidden="true">↗</span></a>
+          <Link href="/contact-me" className="nav-cta">Contact <span aria-hidden="true">↗</span></Link>
         </nav>
       </header>
 
@@ -151,13 +132,13 @@ export default function Home() {
             Technology · Energy · Manufacturing
           </p>
           <p className="hero-statement">
-            Experience across management consulting, energy, sustainability, technology, and manufacturing.
+            {sourceCopy.aboutLead}
           </p>
           <div className="hero-actions">
-            <a className="btn btn-dark" href="#contact">
+            <Link className="btn btn-dark" href="/contact-me">
               Start a conversation
               <span className="btn-icon" aria-hidden="true">↗</span>
-            </a>
+            </Link>
             <a className="btn btn-outline" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">
               LinkedIn
               <span className="btn-icon" aria-hidden="true">↗</span>
@@ -187,6 +168,31 @@ export default function Home() {
           <span className="hero-scroll-line" />
           Scroll to explore
         </p>
+      </section>
+
+      {/* ── SOURCE SITE VISUAL ARCHIVE ────────────────────────────── */}
+      <section className="source-archive section-alt">
+        <div className="wrap source-archive-intro reveal">
+          <div>
+            <p className="section-number">00</p>
+            <p className="section-label">Ideas, tactics, frameworks</p>
+            <h2 className="section-h2">A place for<br /><em>the work behind</em><br />the work.</h2>
+          </div>
+          <div className="source-archive-copy-wrap">
+            <p className="source-archive-copy">{sourceCopy.homeIntro}</p>
+            <Link className="source-archive-link" href="/ideas-frameworks">Read more <span aria-hidden="true">↗</span></Link>
+          </div>
+        </div>
+        <div className="wrap source-archive-images reveal">
+          <figure className="source-archive-image source-archive-image-wide">
+            <Image src="/abhay-himalayan-meeting.jpg" alt="Abhay Jain in conversation" fill sizes="(max-width: 960px) 100vw, 66vw" />
+            <figcaption>Conversation / India / 01</figcaption>
+          </figure>
+          <figure className="source-archive-image source-archive-image-tall">
+            <Image src="/abhay-kalam.jpg" alt="Abhay Jain at a public event" fill sizes="(max-width: 960px) 100vw, 33vw" />
+            <figcaption>Public work / India / 02</figcaption>
+          </figure>
+        </div>
       </section>
 
       {/* ── CURRENT FOCUS ──────────────────────────────────────────── */}
@@ -303,6 +309,9 @@ export default function Home() {
           >
             Connect on LinkedIn <span aria-hidden="true">↗</span>
           </a>
+          <nav className="social-row" aria-label="Social profiles">
+            {socialLinks.map((social) => <a key={social.label} href={social.href} target="_blank" rel="noreferrer">{social.label} <span aria-hidden="true">↗</span></a>)}
+          </nav>
         </div>
       </section>
 
@@ -357,7 +366,7 @@ export default function Home() {
           </div>
           <div className="contact-side">
             <p className="contact-desc">
-              For advisory, operating, technology, energy, sustainability, or institutional conversations.
+              {sourceCopy.contactLead}
             </p>
             <div className="contact-actions">
               <a
@@ -368,7 +377,7 @@ export default function Home() {
               >
                 Connect on LinkedIn <span aria-hidden="true">↗</span>
               </a>
-              <Link className="contact-link contact-link-secondary" href="/about">
+              <Link className="contact-link contact-link-secondary" href="/about-me">
                 View full profile
               </Link>
             </div>
@@ -377,7 +386,10 @@ export default function Home() {
 
         <footer className="wrap site-footer footer-dark">
           <span>© {new Date().getFullYear()} Abhay Jain</span>
-          <Link href="/about">About</Link>
+          <Link href="/about-me">About me</Link>
+          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
+          <Link href="/contact-me">Contact me</Link>
+          <Link href="/sitemap.xml">Sitemap</Link>
           <span>abhayjain.net</span>
         </footer>
       </section>

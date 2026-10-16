@@ -1,105 +1,13 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { awards, education, publications, socialLinks, sourceCopy, workExperience } from '../source-data';
 
 export const metadata: Metadata = {
   title: 'About Abhay Jain — Executive Profile',
   description: 'Selected career, education, recognitions, and publications of Abhay Jain across consulting, energy, sustainability, technology, and manufacturing.',
-  alternates: { canonical: '/about' },
+  alternates: { canonical: '/about-me' },
 };
-
-/* ── data ────────────────────────────────────────────────────────────────── */
-const workExperience = [
-  {
-    logo: '/mckinsey_logo.png',
-    company: 'McKinsey & Co.',
-    role: 'Consultant',
-    alt: 'McKinsey & Company',
-  },
-  {
-    logo: '/mitsubishi_logo.png',
-    company: 'Mitsubishi Heavy Industries',
-    role: 'Sales & Marketing Executive; Compressor & Steam Turbine Engineer',
-    alt: 'Mitsubishi Heavy Industries',
-  },
-  {
-    logo: '/nextera_logo.png',
-    company: 'NextEra Energy',
-    role: 'MBA Intern, Renewable Energy Innovation and Strategy',
-    alt: 'NextEra Energy',
-  },
-  {
-    logo: '/autogrid_logo.png',
-    company: 'AutoGrid',
-    role: 'Summer Intern, Solutions and Data Science',
-    alt: 'AutoGrid',
-  },
-  {
-    logo: '/sparkz_logo.png',
-    company: 'Sparkz Inc.',
-    role: 'Business and Product Development Manager (Intern)',
-    alt: 'Sparkz Inc.',
-  },
-  {
-    logo: '/averda_logo.png',
-    company: 'Averda',
-    role: 'Operations Intern, COO Office',
-    alt: 'Averda',
-  },
-];
-
-const education = [
-  {
-    logo: '/iit_logo.png',
-    school: 'IIT Kanpur',
-    degree: 'B.Tech — Materials & Metallurgical Engineering',
-    alt: 'IIT Kanpur',
-    whiteBg: true,
-  },
-  {
-    logo: '/stanford_logo.png',
-    school: 'Stanford University',
-    degree: 'MBA, Graduate School of Business',
-    alt: 'Stanford University',
-    whiteBg: false,
-  },
-  {
-    logo: '/stanford_earth_logo.png',
-    school: 'Stanford University',
-    degree: 'MS in Environment and Resources, School of Earth',
-    alt: 'Stanford University — Earth',
-    whiteBg: false,
-  },
-];
-
-const publications = [
-  {
-    title: 'Global surveys of consumer sentiment during the coronavirus crisis',
-    source: 'McKinsey & Company · 2020',
-    href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/a-global-view-of-how-consumer-behavior-is-changing-amid-covid-19',
-  },
-  {
-    title: 'Technical Challenges for Compressors and Steam Turbines in Mega Ethylene Plants',
-    source: 'Texas A&M Turbomachinery Symposium · 2016',
-    href: 'https://oaktrust.library.tamu.edu/items/05594529-135c-421d-9e9b-1ca4e1ad9cce',
-  },
-  {
-    title: 'Emergency Shutoff Device and System Patent',
-    source: 'Mitsubishi Heavy Industries · 2016',
-    href: 'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2016084140',
-  },
-  {
-    title: 'Low Hanging Fruit: VC Investment Trends in Food Waste',
-    source: 'Stanford EIPER · 2020',
-    href: 'https://earth.stanford.edu/eiper',
-  },
-];
-
-const awards = [
-  { title: 'K.C. Mahindra Scholarship', note: 'For Graduate Studies · 2017' },
-  { title: 'J.N. Tata Scholarship', note: 'For Graduate Studies · 2017' },
-  { title: 'Stanford fellowships', note: 'Social Management Immersion · 2018; InSite · 2019' },
-];
 
 /* ── Route Map SVG ───────────────────────────────────────────────────────── */
 function RouteMap() {
@@ -133,16 +41,18 @@ export default function AboutPage() {
       <header className="site-header">
         <Link className="wordmark" href="/" aria-label="Abhay Jain — home">
           <span className="wordmark-badge">AJ</span>
-          <span>Abhay Jain</span>
+          <span>Business &amp; Strategy</span>
         </Link>
         <nav className="site-nav" aria-label="Primary">
-          <Link href="/about" className="nav-active">About</Link>
+          <Link href="/about-me" className="nav-active">About</Link>
+          <span className="nav-dot" aria-hidden="true">·</span>
+          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
           <Link href="/#focus">Focus</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
           <Link href="/#track-record">Track Record</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
-          <Link href="/#contact" className="nav-cta">Contact <span aria-hidden="true">↗</span></Link>
+          <Link href="/contact-me" className="nav-cta">Contact <span aria-hidden="true">↗</span></Link>
         </nav>
       </header>
 
@@ -160,11 +70,10 @@ export default function AboutPage() {
             <em>geographies.</em>
           </h1>
           <p className="about-lede">
-            Experience across management consulting, energy, sustainability, technology,
-            and manufacturing operations in India, Japan, and the United States.
+            {sourceCopy.aboutLead}
           </p>
           <p className="about-origin">
-            From the foothills of the Himalayas · Japan · United States · India
+            {sourceCopy.aboutOrigin}
           </p>
         </div>
 
@@ -300,7 +209,7 @@ export default function AboutPage() {
                 <span className="rec-idx">0{i + 1}</span>
                 <div>
                   <p className="rec-text" style={{ fontWeight: 500 }}>{item.title}</p>
-                  <p className="rec-text" style={{ color: 'var(--ink-60)', fontSize: '13px', marginTop: '2px' }}>{item.note}</p>
+                  {item.note && <p className="rec-text" style={{ color: 'var(--ink-60)', fontSize: '13px', marginTop: '2px' }}>{item.note}</p>}
                 </div>
               </div>
             ))}
@@ -333,6 +242,31 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── SOURCE SITE ADDITIONS ──────────────────────────────────── */}
+      <section className="section">
+        <div className="wrap section-grid reveal">
+          <div>
+            <p className="section-number">05</p>
+            <p className="section-label">Some more things about me…</p>
+            <h2 className="section-h2">
+              More<br />
+              to<br />
+              <em>come.</em>
+            </h2>
+          </div>
+          <div className="source-additions">
+            <article className="source-addition">
+              <p className="aff-head">Extra Curricular</p>
+              <p className="source-addition-status">Coming soon</p>
+            </article>
+            <article className="source-addition">
+              <p className="aff-head">Projects</p>
+              <p className="source-addition-status">Coming soon</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* ── BANNER ─────────────────────────────────────────────────── */}
       <section className="banner-section">
         <div className="banner-img-wrap">
@@ -354,6 +288,11 @@ export default function AboutPage() {
           <a className="btn btn-dark" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">
             Connect on LinkedIn <span aria-hidden="true">↗</span>
           </a>
+          <nav className="social-row" aria-label="Social profiles">
+            {socialLinks.map((social) => (
+              <a key={social.label} href={social.href} target="_blank" rel="noreferrer">{social.label} <span aria-hidden="true">↗</span></a>
+            ))}
+          </nav>
         </div>
       </section>
 
@@ -363,7 +302,7 @@ export default function AboutPage() {
           <div>
             <p className="eyebrow contact-eyebrow">
               <span className="eyebrow-line" aria-hidden="true" />
-              05 · Contact
+              06 · Contact
             </p>
             <h2 className="contact-h2">
               Relevant<br />
@@ -386,6 +325,9 @@ export default function AboutPage() {
         <footer className="wrap site-footer footer-dark">
           <Link href="/">← Home</Link>
           <span>© {new Date().getFullYear()} Abhay Jain</span>
+          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
+          <Link href="/contact-me">Contact me</Link>
+          <Link href="/sitemap.xml">Sitemap</Link>
           <span>abhayjain.net</span>
         </footer>
       </section>
