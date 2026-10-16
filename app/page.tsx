@@ -3,31 +3,31 @@ import Link from 'next/link';
 
 /* ── real data from source sites ─────────────────────────────────────────── */
 const focusAreas = [
-  'Leading Renesas\' India-for-India business unit, managing power management, sensing, and embedded analog semiconductor portfolios.',
-  'Shaping localised product roadmaps and accelerating market adoption across automotive, industrial, and energy segments.',
-  'Developing critical ecosystem partnerships to support sustainable scaling within India\'s rapidly evolving electronics hardware economy.',
+  'Business and product strategy across technology, energy, sustainability, and manufacturing.',
+  'Operating across product direction, market adoption, commercial growth, and cross-functional execution.',
+  'Building practical systems and partnerships that make complex ideas useful, adoptable, and durable.',
 ];
 
 const trackRecord = [
   {
-    stat: '$3B – $30B',
-    label: 'Portfolio Management',
-    detail: 'Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.',
+    stat: 'Strategy',
+    label: 'Management consulting',
+    detail: 'Consulting experience across growth, operations, technology, energy, and consumer research at McKinsey & Company.',
   },
   {
-    stat: '+15% to 20%',
-    label: 'Operational Efficiency',
-    detail: 'Built central program networks governing resource deployment, outsourcing, and analytics automation.',
+    stat: 'Industry',
+    label: 'Engineering and commercial execution',
+    detail: 'Engineering, sales, and marketing work on compressors and steam turbines at Mitsubishi Heavy Industries.',
   },
   {
-    stat: '~10% Growth',
-    label: 'Org Transformation',
-    detail: 'Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.',
+    stat: 'Energy',
+    label: 'Innovation and sustainability',
+    detail: 'Renewable energy innovation, strategy, waste, and sustainability work across operating and research settings.',
   },
   {
-    stat: 'Patented',
-    label: 'Deep-Tech Hardware',
-    detail: 'Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.',
+    stat: 'Research',
+    label: 'Published work and patents',
+    detail: 'Selected research, technical writing, and patent work spanning industrial systems, consumer sentiment, and food waste.',
   },
 ];
 
@@ -59,7 +59,7 @@ const selectedWork = [
 ];
 
 const affiliations = {
-  current: ['Renesas Electronics'],
+  current: ['Business & strategy'],
   earlier: ['McKinsey & Company', 'Mitsubishi Heavy Industries', 'NextEra Energy', 'AutoGrid', 'Sparkz Inc.', 'Averda'],
   education: ['Stanford University (MBA)', 'Stanford University (MS Earth)', 'IIT Kanpur (B.Tech)'],
 };
@@ -111,7 +111,9 @@ function SignalThread() {
 /* ── page ────────────────────────────────────────────────────────────────── */
 export default function Home() {
   return (
-    <main>
+    <>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <main id="main-content">
       <SignalThread />
 
       {/* ── HEADER ─────────────────────────────────────────────────── */}
@@ -144,12 +146,12 @@ export default function Home() {
             <em>Jain</em>
           </h1>
           <p className="hero-role">
-            Business Division Leader
+            Business & Strategy Professional
             <span className="hero-role-sep" aria-hidden="true">·</span>
-            Renesas Electronics
+            Technology · Energy · Manufacturing
           </p>
           <p className="hero-statement">
-            Bridging technology, localised product strategy, and cross-functional operations across power-management semiconductors.
+            Experience across management consulting, energy, sustainability, technology, and manufacturing.
           </p>
           <div className="hero-actions">
             <a className="btn btn-dark" href="#contact">
@@ -291,7 +293,7 @@ export default function Home() {
           <h2 className="banner-h2">Inbound</h2>
           <p className="banner-sub">
             Open to precise conversations regarding advisory positions,
-            semiconductor ecosystem strategies, or institutional alignment.
+            operating questions, or institutional alignment.
           </p>
           <a
             className="btn btn-dark"
@@ -355,7 +357,7 @@ export default function Home() {
           </div>
           <div className="contact-side">
             <p className="contact-desc">
-              For advisory, operating, semiconductor ecosystem, or institutional conversations.
+              For advisory, operating, technology, energy, sustainability, or institutional conversations.
               Have a new idea, want to discuss an opportunity, or share thoughts?
             </p>
             <div className="contact-actions">
@@ -380,6 +382,7 @@ export default function Home() {
           <span>abhayjain.net</span>
         </footer>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

@@ -18,20 +18,20 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abhayjain.net'),
-  title: 'Abhay Jain — Business & Strategy Leader',
-  description: 'Executive profile of Abhay Jain, a business and strategy leader working across power-management semiconductors, product direction, and execution.',
+  title: 'Abhay Jain — Executive Profile',
+  description: 'Executive profile of Abhay Jain, a business and strategy professional working across consulting, energy, sustainability, technology, and manufacturing.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Abhay Jain — Business & Strategy Leader',
-    description: 'Business and strategy leader working across power-management semiconductors, product direction, and execution.',
+    title: 'Abhay Jain — Executive Profile',
+    description: 'Business and strategy professional working across consulting, energy, sustainability, technology, and manufacturing.',
     url: 'https://abhayjain.net',
     siteName: 'Abhay Jain',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Abhay Jain — Business & Strategy Leader',
-    description: 'Business and strategy leader working across power-management semiconductors, product direction, and execution.',
+    title: 'Abhay Jain — Executive Profile',
+    description: 'Business and strategy professional working across consulting, energy, sustainability, technology, and manufacturing.',
   },
 };
 

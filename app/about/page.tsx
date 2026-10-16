@@ -89,16 +89,6 @@ const publications = [
     href: 'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2016084140',
   },
   {
-    title: 'The clock stops ticking, Vox-populi',
-    source: 'IIT Kanpur · 2016',
-    href: 'https://voxiitk.com/the-clock-stops-ticking/',
-  },
-  {
-    title: 'Emergency Shut-Off Device Patent',
-    source: 'Mitsubishi Heavy Industries · 2017',
-    href: 'https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2017104037',
-  },
-  {
     title: 'Low Hanging Fruit: VC Investment Trends in Food Waste',
     source: 'Stanford EIPER · 2020',
     href: 'https://earth.stanford.edu/eiper',
@@ -108,9 +98,7 @@ const publications = [
 const awards = [
   { title: 'K.C. Mahindra Scholarship', note: 'For Graduate Studies · 2017' },
   { title: 'J.N. Tata Scholarship', note: 'For Graduate Studies · 2017' },
-  { title: 'Social Management Immersion', note: 'Fellowship, Stanford · 2018' },
-  { title: 'Certificate in Public Management & Social Innovation', note: 'Stanford · 2019' },
-  { title: 'InSite Fellowship', note: '2019' },
+  { title: 'Stanford fellowships', note: 'Social Management Immersion · 2018; InSite · 2019' },
 ];
 
 /* ── Route Map SVG ───────────────────────────────────────────────────────── */
@@ -138,7 +126,9 @@ function RouteMap() {
 /* ── page ────────────────────────────────────────────────────────────────── */
 export default function AboutPage() {
   return (
-    <main>
+    <>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <main id="main-content">
       {/* ── HEADER ─────────────────────────────────────────────────── */}
       <header className="site-header">
         <Link className="wordmark" href="/" aria-label="Abhay Jain — home">
@@ -165,13 +155,13 @@ export default function AboutPage() {
             <span className="eyebrow-muted">— Full biography</span>
           </p>
           <h1 className="about-h1">
-            A global<br />
-            professional<br />
-            <em>at scale.</em>
+            Across<br />
+            industries and<br />
+            <em>geographies.</em>
           </h1>
           <p className="about-lede">
-            Comprehensive expertise in management consulting, energy sustainability,
-            deep-tech hardware, and manufacturing operations across international markets.
+            Experience across management consulting, energy, sustainability, technology,
+            and manufacturing operations in India, Japan, and the United States.
           </p>
           <p className="about-origin">
             From the foothills of the Himalayas · Japan · United States · India
@@ -202,9 +192,7 @@ export default function AboutPage() {
         <div className="wrap statement-inner">
           <p className="section-label" style={{ color: 'rgba(180,83,42,.8)' }}>The throughline</p>
           <p className="statement-text">
-            With early roots in the Himalayan region of India, a four-year tenure in Japan,
-            graduate studies in the United States — the work has changed industries, but the
-            question has stayed consistent: how do complex systems become useful, adoptable, and durable?
+            The work has moved across consulting, energy, technology, and manufacturing — with a consistent focus on making complex systems useful, adoptable, and durable.
           </p>
         </div>
       </section>
@@ -361,7 +349,7 @@ export default function AboutPage() {
           <h2 className="banner-h2">Inbound</h2>
           <p className="banner-sub">
             Open to precise conversations regarding advisory positions,
-            semiconductor ecosystem strategies, or institutional alignment.
+            operating questions, or institutional alignment.
           </p>
           <a className="btn btn-dark" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">
             Connect on LinkedIn <span aria-hidden="true">↗</span>
@@ -385,7 +373,7 @@ export default function AboutPage() {
           </div>
           <div className="contact-side">
             <p className="contact-desc">
-              For advisory, operating, semiconductor ecosystem, or institutional conversations.
+              For advisory, operating, technology, energy, sustainability, or institutional conversations.
             </p>
             <div className="contact-actions">
               <a className="contact-link contact-link-primary" href="https://www.linkedin.com/in/abhay-jain-10/" target="_blank" rel="noreferrer">
@@ -401,6 +389,7 @@ export default function AboutPage() {
           <span>abhayjain.net</span>
         </footer>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
