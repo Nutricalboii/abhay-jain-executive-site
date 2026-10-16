@@ -76,7 +76,7 @@ public/
 
 ## Content guardrails
 
-The current title and public email are intentionally marked `[TBC]` until Abhay confirms them. Do not replace these with guesses. Do not add metrics unless they are verified and approved for publication.
+The site uses a factual role descriptor until Abhay confirms the exact current title. The public email is intentionally omitted until confirmed. Do not replace either with guesses. Do not add metrics unless they are verified and approved for publication.
 
 The source material is the existing `abhayjain.net` site, public LinkedIn profile, and the selected research, technical paper, and patent links shown in the site. Keep the content curated; do not turn the site into a full résumé or publication archive.
 
@@ -86,4 +86,4 @@ The source material is the existing `abhayjain.net` site, public LinkedIn profil
 2. Keep the current editorial visual language and SVG motion system.
 3. Run `npm run lint` and `npm run build` after changes.
 4. Do not change `abhayjain.net` DNS or deployment settings without approval.
-5. Before final launch, replace `[Current title TBC]` and `Email [TBC]` with confirmed details.
+5. Before final launch, replace the general role descriptor and omitted email with confirmed details if Abhay approves them.
