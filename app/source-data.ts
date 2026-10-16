@@ -36,12 +36,12 @@ export const publications = [
   {
     title: 'Low Hanging Fruit: VC Investment Trends in Food Waste',
     source: 'Stanford EIPER, 2020',
-    href: 'https://earth.stanford.edu/eiper/capstone/archives',
+    href: 'https://eiper.stanford.edu/',
   },
   {
     title: 'Stanford experts discuss challenges and opportunities in disposing of waste',
     source: 'Stanford News, 2019',
-    href: 'https://pangea.stanford.edu/news/stanford-experts-discuss-challenges-and-opportunities-disposing-waste',
+    href: 'https://news.stanford.edu/stories/2019/04/reassessing-waste-not',
   },
   {
     title: 'Technical Challenges for Compressors and Steam Turbines for Efficient and Sustainable Operation in Mega Ethylene Plants',
