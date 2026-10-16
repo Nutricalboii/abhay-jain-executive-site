@@ -1046,13 +1046,13 @@ button:focus-visible {
 .banner-img {
   object-fit: cover;
   object-position: 80% center;
-  filter: grayscale(40%);
-  opacity: .65;
+  filter: grayscale(12%);
+  opacity: .9;
 }
 .banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, var(--paper) 20%, transparent 70%);
+  background: linear-gradient(90deg, rgba(243,240,232,.98) 0%, rgba(243,240,232,.9) 25%, rgba(243,240,232,.28) 57%, transparent 84%);
 }
 .banner-content {
   position: relative;
@@ -1126,8 +1126,8 @@ button:focus-visible {
 @media (max-width: 960px) {
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .banner-img { opacity: .35; }
-  .banner-overlay { background: linear-gradient(to right, var(--paper) 40%, rgba(243,240,232,.7) 100%); }
+  .banner-img { opacity: .72; }
+  .banner-overlay { background: linear-gradient(90deg, rgba(243,240,232,.96) 0%, rgba(243,240,232,.82) 38%, rgba(243,240,232,.28) 76%, transparent 100%); }
 }
 @media (max-width: 640px) {
   .logo-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -1175,6 +1175,7 @@ button:focus-visible {
 .source-page-title { font-family: var(--font-display); font-size: clamp(64px, 8vw, 128px); font-weight: 400; line-height: .86; letter-spacing: -.06em; margin-block: 28px 34px; }
 .source-page-title em { color: var(--copper); }
 .source-page-lede { max-width: 500px; font-family: var(--font-display); font-size: clamp(24px, 3vw, 38px); line-height: 1.18; color: var(--ink-60); letter-spacing: -.03em; }
+.source-page-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
 .source-page-image { position: relative; min-height: 520px; overflow: hidden; border: 1px solid var(--ink-15); background: var(--paper-deep); }
 .source-page-image img { object-fit: cover; }
 .image-caption { position: absolute; z-index: 1; left: 20px; bottom: 18px; color: var(--white); font-family: var(--font-mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; text-shadow: 0 1px 12px rgba(0,0,0,.5); }

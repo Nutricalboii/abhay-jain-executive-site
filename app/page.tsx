@@ -301,7 +301,7 @@ export default function Home() {
       </section>
 
       {/* ── BANNER IMAGE SECTION ────────────────────────────────────── */}
-      <section className="banner-section">
+      <section id="inbound" className="banner-section">
         <div className="banner-img-wrap">
           <Image
             src="/Abhay_Jain_banner_pic.jpg"

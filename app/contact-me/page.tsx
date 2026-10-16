@@ -41,7 +41,7 @@ export default function ContactMePage() {
             </div>
           </div>
           <div className="source-page-image">
-            <Image src="/contact-writing.jpg" alt="Notebook and pen on a desk" fill sizes="(max-width: 960px) 100vw, 48vw" />
+            <Image src="/contact-writing.jpg" alt="Notebook and pen on a desk" fill sizes="(max-width: 960px) 100vw, 48vw" priority />
             <span className="image-caption">Contact / 01</span>
           </div>
         </section>

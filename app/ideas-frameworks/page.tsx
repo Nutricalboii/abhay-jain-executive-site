@@ -36,14 +36,18 @@ export default function IdeasFrameworksPage() {
             <p className="eyebrow"><span className="eyebrow-line" aria-hidden="true" />Ideas &amp; Frameworks</p>
             <h1 className="source-page-title">Thoughts,<br /><em>learnings,</em><br />and ideas.</h1>
             <p className="source-page-lede">{sourceCopy.homeIntro}</p>
+            <div className="source-page-actions">
+              <a className="btn btn-dark" href="#published-ideas">View the archive <span className="btn-icon" aria-hidden="true">↓</span></a>
+              <Link className="btn btn-outline" href="/contact-me">Start a conversation <span className="btn-icon" aria-hidden="true">↗</span></Link>
+            </div>
           </div>
           <div className="source-page-image">
-            <Image src="/abhay-himalayan-meeting.jpg" alt="Abhay Jain in conversation" fill sizes="(max-width: 960px) 100vw, 48vw" />
+            <Image src="/abhay-himalayan-meeting.jpg" alt="Abhay Jain in conversation" fill sizes="(max-width: 960px) 100vw, 48vw" priority />
             <span className="image-caption">Ideas / Frameworks / 01</span>
           </div>
         </section>
 
-        <section className="section section-alt">
+        <section id="published-ideas" className="section section-alt">
           <div className="wrap source-empty-state reveal">
             <div>
               <p className="section-number">01</p>
