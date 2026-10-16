@@ -170,6 +170,27 @@ export default function Home() {
         </p>
       </section>
 
+      {/* ── KALAM HIGHLIGHT ───────────────────────────────────────── */}
+      <section id="kalam-highlight" className="kalam-highlight section-alt">
+        <div className="wrap kalam-highlight-inner reveal">
+          <div className="kalam-highlight-copy">
+            <p className="section-number">01</p>
+            <p className="section-label">A public moment</p>
+            <h2 className="section-h2">With Dr. A.P.J.<br /><em>Abdul Kalam.</em></h2>
+            <p className="section-sub">Abhay Jain with Dr. A.P.J. Abdul Kalam.</p>
+          </div>
+          <figure className="kalam-highlight-image">
+            <Image
+              src="/abhay-kalam.jpg"
+              alt="Abhay Jain with Dr. A.P.J. Abdul Kalam"
+              fill
+              sizes="(max-width: 960px) 100vw, 68vw"
+            />
+            <figcaption>Abhay Jain / Dr. A.P.J. Abdul Kalam</figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* ── SOURCE SITE VISUAL ARCHIVE ────────────────────────────── */}
       <section className="source-archive section-alt">
         <div className="wrap source-archive-intro reveal">
@@ -187,10 +208,6 @@ export default function Home() {
           <figure className="source-archive-image source-archive-image-wide">
             <Image src="/abhay-himalayan-meeting.jpg" alt="Abhay Jain in conversation" fill sizes="(max-width: 960px) 100vw, 66vw" />
             <figcaption>Conversation / India / 01</figcaption>
-          </figure>
-          <figure className="source-archive-image source-archive-image-tall">
-            <Image src="/abhay-kalam.jpg" alt="Abhay Jain at a public event" fill sizes="(max-width: 960px) 100vw, 33vw" />
-            <figcaption>Public work / India / 02</figcaption>
           </figure>
         </div>
       </section>

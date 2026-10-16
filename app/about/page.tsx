@@ -138,7 +138,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── EDUCATION ──────────────────────────────────────────────── */}
-      <section className="section section-alt">
+      <section id="education" className="section section-alt">
         <div className="wrap reveal">
           <div className="logo-section-header">
             <p className="section-number">02</p>
