@@ -112,11 +112,6 @@ export default function Home() {
       {/* ── HERO ───────────────────────────────────────────────────── */}
       <section id="top" className="hero wrap">
         <div className="hero-copy">
-          <p className="eyebrow">
-            <span className="eyebrow-line" aria-hidden="true" />
-            Executive profile
-            <span className="eyebrow-muted">— India / Global</span>
-          </p>
           <h1 className="hero-name">
             Abhay<br />
             <em>Jain</em>
@@ -194,12 +189,6 @@ export default function Home() {
             <p className="source-archive-copy">{sourceCopy.homeIntro}</p>
             <Link className="source-archive-link" href="/ideas-frameworks">Read more <span aria-hidden="true">↗</span></Link>
           </div>
-        </div>
-        <div className="wrap source-archive-images reveal">
-          <figure className="source-archive-image source-archive-image-wide">
-            <Image src="/abhay-himalayan-meeting.jpg" alt="Abhay Jain in conversation" fill sizes="(max-width: 960px) 100vw, 66vw" />
-            <figcaption>Conversation / India / 01</figcaption>
-          </figure>
         </div>
       </section>
 

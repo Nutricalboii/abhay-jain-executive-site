@@ -18,11 +18,11 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abhayjain.net'),
-  title: 'Abhay Jain — Executive Profile',
-  description: 'Executive profile of Abhay Jain, a business and strategy professional working across consulting, energy, sustainability, technology, and manufacturing.',
+  title: 'Abhay Jain — Business & Strategy',
+  description: 'Business and strategy profile of Abhay Jain, working across consulting, energy, sustainability, technology, and manufacturing.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Abhay Jain — Executive Profile',
+    title: 'Abhay Jain — Business & Strategy',
     description: 'Business and strategy professional working across consulting, energy, sustainability, technology, and manufacturing.',
     url: 'https://abhayjain.net',
     siteName: 'Abhay Jain',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Abhay Jain — Executive Profile',
+    title: 'Abhay Jain — Business & Strategy',
     description: 'Business and strategy professional working across consulting, energy, sustainability, technology, and manufacturing.',
   },
 };

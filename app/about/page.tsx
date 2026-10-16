@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { awards, education, publications, socialLinks, sourceCopy, workExperience } from '../source-data';
 
 export const metadata: Metadata = {
-  title: 'About Abhay Jain — Executive Profile',
+  title: 'About Abhay Jain — Background & Work',
   description: 'Selected career, education, recognitions, and publications of Abhay Jain across consulting, energy, sustainability, technology, and manufacturing.',
   alternates: { canonical: '/about-me' },
 };
@@ -54,11 +54,6 @@ export default function AboutPage() {
       {/* ── ABOUT HERO ─────────────────────────────────────────────── */}
       <section className="about-hero wrap">
         <div className="about-hero-copy">
-          <p className="eyebrow">
-            <span className="eyebrow-line" aria-hidden="true" />
-            Executive Profile
-            <span className="eyebrow-muted">— Selected profile</span>
-          </p>
           <h1 className="about-h1">
             Across<br />
             industries and<br />

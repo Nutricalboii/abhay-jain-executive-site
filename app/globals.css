@@ -1076,14 +1076,6 @@ button:focus-visible {
 .source-archive-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
 .source-archive-copy { max-width: 460px; color: var(--ink-60); font-family: var(--font-display); font-size: clamp(24px, 3vw, 38px); line-height: 1.15; letter-spacing: -.03em; }
 .source-archive-link { display: inline-block; align-self: end; margin-top: 18px; font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--copper); }
-.source-archive-images { display: grid; grid-template-columns: 1.65fr .85fr; gap: 20px; margin-top: 72px; }
-.source-archive-image { position: relative; overflow: hidden; min-height: 330px; border: 1px solid var(--ink-15); background: var(--paper-deep); }
-.source-archive-image-wide { min-height: 430px; }
-.source-archive-image-tall { min-height: 430px; }
-.source-archive-image img { object-fit: cover; transition: transform .8s var(--ease-out); }
-.source-archive-image:hover img { transform: scale(1.03); }
-.source-archive-image figcaption { position: absolute; left: 18px; bottom: 16px; z-index: 1; font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--white); text-shadow: 0 1px 12px rgba(0,0,0,.45); }
-.source-archive-image::after { content: ''; position: absolute; inset: 50% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.42)); pointer-events: none; }
 
 /* ── KALAM HIGHLIGHT ───────────────────────────────────────────────────── */
 .kalam-highlight { padding-block: var(--space-2xl); border-top: 1px solid var(--ink-08); }
@@ -1133,10 +1125,9 @@ button:focus-visible {
 .form-success p:not(.form-preview-note) { margin-top: 12px; color: var(--ink-60); }
 
 @media (max-width: 960px) {
-  .source-archive-intro, .source-archive-images, .source-page-hero, .source-empty-state, .subscribe-panel, .contact-form-layout, .kalam-highlight-inner { grid-template-columns: 1fr; gap: 40px; }
+  .source-archive-intro, .source-page-hero, .source-empty-state, .subscribe-panel, .contact-form-layout, .kalam-highlight-inner { grid-template-columns: 1fr; gap: 40px; }
   .source-page-hero { min-height: auto; padding-block: 64px 80px; }
   .source-page-image { min-height: 420px; }
-  .source-archive-images { margin-top: 40px; }
   .kalam-highlight-image { min-height: 420px; }
 }
 
@@ -1144,7 +1135,6 @@ button:focus-visible {
   .wordmark > span:last-child { display: none; }
   .site-nav { flex: 1; justify-content: flex-end; gap: 10px; max-width: calc(100% - 44px); font-size: 9px; }
   .source-page-title { font-size: clamp(56px, 17vw, 90px); }
-  .source-archive-image-wide, .source-archive-image-tall { min-height: 300px; }
   .source-additions, .form-grid { grid-template-columns: 1fr; }
   .form-full { grid-column: auto; }
   .subscribe-row { flex-direction: column; }

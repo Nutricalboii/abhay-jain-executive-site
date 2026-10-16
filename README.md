@@ -1,4 +1,4 @@
-# Abhay Jain — Executive Profile
+# Abhay Jain — Business & Strategy
 
 Editorial portfolio website for Abhay Jain, designed for senior executives, board members, investors, government and ecosystem partners, and founders evaluating an advisory or operating conversation.
 
