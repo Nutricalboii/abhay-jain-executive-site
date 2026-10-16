@@ -197,28 +197,6 @@ button:focus-visible {
 
 .hero-copy { position: relative; z-index: 2; }
 
-/* Eyebrow */
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 28px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--copper);
-}
-.eyebrow-line {
-  display: inline-block;
-  width: 32px;
-  height: 1px;
-  background: var(--copper);
-  flex-shrink: 0;
-}
-.eyebrow-muted { color: var(--ink-60); margin-left: 4px; }
-
 /* Display name */
 .hero-name {
   font-family: var(--font-display);
@@ -358,19 +336,6 @@ button:focus-visible {
   object-position: top;
   filter: saturate(.8) contrast(1.08);
 }
-.portrait-cap {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--ink-60);
-}
-.portrait-cap span:first-child { color: var(--copper); }
-
 /* ─── SECTION SHELL ─────────────────────────────────────────────────────────── */
 .section {
   padding-block: var(--space-2xl);
@@ -390,14 +355,6 @@ button:focus-visible {
 }
 
 /* Section intro (left col) */
-.section-number {
-  margin-bottom: 14px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  color: var(--copper);
-}
 .section-label {
   font-family: var(--font-sans);
   font-size: 11px;
@@ -594,7 +551,6 @@ button:focus-visible {
   align-items: end;
   padding-block: var(--space-2xl);
 }
-.contact-eyebrow { color: rgba(180,83,42,.9); }
 .contact-h2 {
   font-family: var(--font-display);
   font-size: clamp(40px, 5vw, 74px);
@@ -915,7 +871,6 @@ button:focus-visible {
 
 /* ── logo grid (About page) ─────────────────────────────────────────────── */
 .logo-section-header { margin-bottom: 48px; }
-.logo-section-header .section-number { margin-bottom: 6px; }
 
 .logo-grid {
   display: grid;
@@ -1086,7 +1041,6 @@ button:focus-visible {
 .kalam-highlight-image img { object-fit: cover; transition: transform .8s var(--ease-out); }
 .kalam-highlight-image:hover img { transform: scale(1.02); }
 .kalam-highlight-image::after { content: ''; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.45)); pointer-events: none; }
-.kalam-highlight-image figcaption { position: absolute; z-index: 1; left: 20px; bottom: 18px; color: var(--white); font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
 
 .social-row, .contact-socials { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 20px; }
 .social-row a, .contact-socials a { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-60); transition: color var(--dur-fast) var(--ease-out); }
@@ -1103,7 +1057,6 @@ button:focus-visible {
 .source-page-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
 .source-page-image { position: relative; min-height: 520px; overflow: hidden; border: 1px solid var(--ink-15); background: var(--paper-deep); }
 .source-page-image img { object-fit: cover; }
-.image-caption { position: absolute; z-index: 1; left: 20px; bottom: 18px; color: var(--white); font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
 .source-page-image::after { content: ''; position: absolute; inset: 50% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.42)); pointer-events: none; }
 .source-empty-state, .subscribe-panel, .contact-form-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .source-empty-copy { max-width: 520px; font-size: 20px; line-height: 1.6; color: var(--ink-60); }

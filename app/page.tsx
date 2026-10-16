@@ -147,10 +147,6 @@ export default function Home() {
               className="portrait-img"
               priority
             />
-            <figcaption className="portrait-cap">
-              <span>01</span>
-              <span>Strategy · Systems · Execution</span>
-            </figcaption>
           </figure>
         </div>
 
@@ -160,10 +156,7 @@ export default function Home() {
       <section id="kalam-highlight" className="kalam-highlight section-alt">
         <div className="wrap kalam-highlight-inner reveal">
           <div className="kalam-highlight-copy">
-            <p className="section-number">01</p>
-            <p className="section-label">A public moment</p>
             <h2 className="section-h2">With Dr. A.P.J.<br /><em>Abdul Kalam.</em></h2>
-            <p className="section-sub">Abhay Jain with Dr. A.P.J. Abdul Kalam.</p>
           </div>
           <figure className="kalam-highlight-image">
             <Image
@@ -172,7 +165,6 @@ export default function Home() {
               fill
               sizes="(max-width: 960px) 100vw, 68vw"
             />
-            <figcaption>Abhay Jain / Dr. A.P.J. Abdul Kalam</figcaption>
           </figure>
         </div>
       </section>
@@ -181,8 +173,6 @@ export default function Home() {
       <section className="source-archive section-alt">
         <div className="wrap source-archive-intro reveal">
           <div>
-            <p className="section-number">00</p>
-            <p className="section-label">Ideas, tactics, frameworks</p>
             <h2 className="section-h2">A place for<br /><em>the work behind</em><br />the work.</h2>
           </div>
           <div className="source-archive-copy-wrap">
@@ -196,7 +186,6 @@ export default function Home() {
       <section id="focus" className="section">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-number">01</p>
             <p className="section-label">Current Focus</p>
             <h2 className="section-h2">
               Where<br />
@@ -222,7 +211,6 @@ export default function Home() {
       <section id="track-record" className="section section-alt">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-number">02</p>
             <p className="section-label">Track Record</p>
             <h2 className="section-h2">
               Proof,<br />
@@ -249,7 +237,7 @@ export default function Home() {
         <div className="wrap reveal">
           <div className="work-header">
             <div>
-              <p className="section-label">03 · Selected Work</p>
+              <p className="section-label">Selected Work</p>
               <h2 className="section-h2">
                 Published<br />
                 <em>record.</em>
@@ -316,7 +304,6 @@ export default function Home() {
       <section className="section section-alt">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-number">04</p>
             <p className="section-label">Roles & Affiliations</p>
             <h2 className="section-h2">
               Built<br />
@@ -351,10 +338,6 @@ export default function Home() {
       <section id="contact" className="contact-section">
         <div className="wrap contact-inner">
           <div>
-            <p className="eyebrow contact-eyebrow">
-              <span className="eyebrow-line" aria-hidden="true" />
-              05 · Contact
-            </p>
             <h2 className="contact-h2">
               Relevant<br />
               conversation?<br />

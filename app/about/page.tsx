@@ -78,10 +78,6 @@ export default function AboutPage() {
               className="portrait-img"
               priority
             />
-            <figcaption className="portrait-cap">
-              <span>PROFILE / 01</span>
-              <span>ABHAY JAIN</span>
-            </figcaption>
           </figure>
         </div>
       </section>
@@ -89,7 +85,6 @@ export default function AboutPage() {
       {/* ── STATEMENT BAND ─────────────────────────────────────────── */}
       <section className="about-statement">
         <div className="wrap statement-inner">
-          <p className="section-label" style={{ color: 'rgba(180,83,42,.8)' }}>The throughline</p>
           <p className="statement-text">
             The work has moved across consulting, energy, technology, and manufacturing — with a consistent focus on making complex systems useful, adoptable, and durable.
           </p>
@@ -100,7 +95,6 @@ export default function AboutPage() {
       <section id="pedigree" className="section">
         <div className="wrap reveal">
           <div className="logo-section-header">
-            <p className="section-number">01</p>
             <p className="section-label">Work Experience</p>
             <h2 className="section-h2">
               Operating<br />
@@ -131,7 +125,6 @@ export default function AboutPage() {
       <section id="education" className="section section-alt">
         <div className="wrap reveal">
           <div className="logo-section-header">
-            <p className="section-number">02</p>
             <p className="section-label">Education</p>
             <h2 className="section-h2">
               Technical<br />
@@ -162,7 +155,6 @@ export default function AboutPage() {
       <section id="honors" className="section">
         <div className="wrap reveal">
           <div className="logo-section-header">
-            <p className="section-number">03</p>
             <p className="section-label">Honors & Published Work</p>
             <h2 className="section-h2">
               Signals<br />
@@ -211,7 +203,6 @@ export default function AboutPage() {
       <section className="section section-alt">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-number">04</p>
             <p className="section-label">Beyond Work</p>
             <h2 className="section-h2">
               Keep a<br />
@@ -236,7 +227,6 @@ export default function AboutPage() {
       <section className="section">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-number">05</p>
             <p className="section-label">Some more things about me…</p>
             <h2 className="section-h2">
               More<br />
@@ -290,10 +280,6 @@ export default function AboutPage() {
       <section className="contact-section">
         <div className="wrap contact-inner">
           <div>
-            <p className="eyebrow contact-eyebrow">
-              <span className="eyebrow-line" aria-hidden="true" />
-              06 · Contact
-            </p>
             <h2 className="contact-h2">
               Relevant<br />
               conversation?<br />

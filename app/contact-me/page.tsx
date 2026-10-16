@@ -33,7 +33,6 @@ export default function ContactMePage() {
 
         <section className="source-page-hero source-page-hero-contact wrap">
           <div>
-            <p className="eyebrow"><span className="eyebrow-line" aria-hidden="true" />Contact me</p>
             <h1 className="source-page-title">Start a<br /><em>conversation.</em></h1>
             <p className="source-page-lede">{sourceCopy.contactLead}</p>
             <div className="contact-socials" aria-label="Social profiles">
@@ -42,14 +41,12 @@ export default function ContactMePage() {
           </div>
           <div className="source-page-image">
             <Image src="/contact-writing.jpg" alt="Notebook and pen on a desk" fill sizes="(max-width: 960px) 100vw, 48vw" priority />
-            <span className="image-caption">Contact / 01</span>
           </div>
         </section>
 
         <section className="section section-alt">
           <div className="wrap contact-form-layout reveal">
             <div>
-              <p className="section-number">01</p>
               <p className="section-label">Contact me</p>
               <h2 className="section-h2">Make the<br /><em>first move.</em></h2>
             </div>

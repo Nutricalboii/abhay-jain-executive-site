@@ -33,7 +33,6 @@ export default function IdeasFrameworksPage() {
 
         <section className="source-page-hero wrap">
           <div>
-            <p className="eyebrow"><span className="eyebrow-line" aria-hidden="true" />Ideas &amp; Frameworks</p>
             <h1 className="source-page-title">Thoughts,<br /><em>learnings,</em><br />and ideas.</h1>
             <p className="source-page-lede">{sourceCopy.homeIntro}</p>
             <div className="source-page-actions">
@@ -42,15 +41,13 @@ export default function IdeasFrameworksPage() {
             </div>
           </div>
           <div className="source-page-image">
-            <Image src="/abhay-himalayan-meeting.jpg" alt="Abhay Jain in conversation" fill sizes="(max-width: 960px) 100vw, 48vw" priority />
-            <span className="image-caption">Ideas / Frameworks / 01</span>
+            <Image src="/abhay-himalayan-meeting.jpg" alt="Abhay Jain" fill sizes="(max-width: 960px) 100vw, 48vw" priority />
           </div>
         </section>
 
         <section id="published-ideas" className="section section-alt">
           <div className="wrap source-empty-state reveal">
             <div>
-              <p className="section-number">01</p>
               <p className="section-label">Published ideas</p>
               <h2 className="section-h2">A quiet<br /><em>beginning.</em></h2>
             </div>
@@ -61,7 +58,6 @@ export default function IdeasFrameworksPage() {
         <section className="section">
           <div className="wrap subscribe-panel reveal">
             <div>
-              <p className="section-label">Stay connected</p>
               <h2 className="section-h2">Sign up to<br /><em>stay current.</em></h2>
             </div>
             <SubscribeForm />
