@@ -64,8 +64,6 @@ function SignalField() {
         <circle style={{ stroke: 'var(--copper)', strokeOpacity: '.4', strokeWidth: '1', fill: 'none' }} cx="320" cy="320" r="18" />
         <circle style={{ stroke: 'var(--copper)', strokeOpacity: '.2', strokeWidth: '.8', fill: 'none' }} cx="320" cy="320" r="34" />
       </svg>
-      <span className="field-label field-label-tl">SIGNAL / 01</span>
-      <span className="field-label field-label-br field-label-accent">POWER · SYSTEMS · SCALE</span>
     </div>
   );
 }
@@ -80,9 +78,6 @@ function SignalThread() {
         <circle className="thread-pip" cx="20" cy="784" r="4" />
         <circle className="thread-pip" cx="20" cy="1390" r="4" />
       </svg>
-      <span className="thread-num thread-num-1">01</span>
-      <span className="thread-num thread-num-2">02</span>
-      <span className="thread-num thread-num-3">03</span>
     </div>
   );
 }
@@ -164,10 +159,6 @@ export default function Home() {
           </figure>
         </div>
 
-        <p className="hero-scroll" aria-hidden="true">
-          <span className="hero-scroll-line" />
-          Scroll to explore
-        </p>
       </section>
 
       {/* ── KALAM HIGHLIGHT ───────────────────────────────────────── */}

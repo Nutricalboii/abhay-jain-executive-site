@@ -22,11 +22,6 @@ function RouteMap() {
         <circle className="route-node" cx="400" cy="160" r="5" />
         <circle className="route-node" cx="552" cy="132" r="5" />
       </svg>
-      <span className="route-lbl route-lbl-1">Himalayan foothills</span>
-      <span className="route-lbl route-lbl-2">Japan · 4 years</span>
-      <span className="route-lbl route-lbl-3">United States</span>
-      <span className="route-lbl route-lbl-4 route-lbl-accent">India</span>
-      <span className="route-cap">A personal geography / 01</span>
     </div>
   );
 }
