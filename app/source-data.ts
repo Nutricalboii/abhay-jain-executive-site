@@ -20,11 +20,11 @@ export const education = [
 ];
 
 export const awards = [
-  { title: 'K. C. Mahindra Scholarship for Graduate Studies, 2017', note: '' },
-  { title: 'J N Tata Scholarship for Graduate Studies, 2017', note: '' },
-  { title: 'Social Management Immersion Fellowship, Stanford, 2018', note: '' },
-  { title: 'Certificate in Public Management and Social Innovation, Stanford University, 2019', note: '' },
-  { title: 'InSite Fellowship, 2019', note: '' },
+  { title: 'K. C. Mahindra Scholarship for Graduate Studies', kind: 'Scholarship', year: '2017', note: '' },
+  { title: 'J N Tata Scholarship for Graduate Studies', kind: 'Scholarship', year: '2017', note: '' },
+  { title: 'Social Management Immersion Fellowship, Stanford', kind: 'Fellowship', year: '2018', note: '' },
+  { title: 'Certificate in Public Management and Social Innovation, Stanford University', kind: 'Certificate', year: '2019', note: '' },
+  { title: 'InSite Fellowship', kind: 'Fellowship', year: '2019', note: '' },
 ];
 
 export const publications = [

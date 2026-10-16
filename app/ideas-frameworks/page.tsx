@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import SubscribeForm from '../components/SubscribeForm';
 import { socialLinks, sourceCopy } from '../source-data';
 
 export const metadata: Metadata = {
@@ -18,12 +17,17 @@ export default function IdeasFrameworksPage() {
         <header className="site-header">
           <Link className="wordmark" href="/" aria-label="Business and strategy home">
             <span className="wordmark-badge">AJ</span>
-            <span>Business &amp; Strategy</span>
+            <span className="wordmark-copy">
+              <strong className="wordmark-name">Abhay Jain</strong>
+              <small className="wordmark-role">Business &amp; Strategy</small>
+            </span>
           </Link>
           <nav className="site-nav" aria-label="Primary">
+            <Link href="/">Home</Link>
+            <span className="nav-dot" aria-hidden="true">·</span>
             <Link href="/about-me">About</Link>
             <span className="nav-dot" aria-hidden="true">·</span>
-            <Link href="/ideas-frameworks" className="nav-active">Ideas &amp; Frameworks</Link>
+            <Link href="/#work" className="nav-active">Work</Link>
             <span className="nav-dot" aria-hidden="true">·</span>
             <Link href="/#focus">Focus</Link>
             <span className="nav-dot" aria-hidden="true">·</span>
@@ -33,10 +37,10 @@ export default function IdeasFrameworksPage() {
 
         <section className="source-page-hero wrap">
           <div>
-            <h1 className="source-page-title">Thoughts,<br /><em>learnings,</em><br />and ideas.</h1>
+            <h1 className="source-page-title">Notes from<br /><em>the work.</em></h1>
             <p className="source-page-lede">{sourceCopy.homeIntro}</p>
             <div className="source-page-actions">
-              <a className="btn btn-dark" href="#published-ideas">View the archive <span className="btn-icon" aria-hidden="true">↓</span></a>
+              <Link className="btn btn-dark" href="/#work">View selected work <span className="btn-icon" aria-hidden="true">↗</span></Link>
               <Link className="btn btn-outline" href="/contact-me">Start a conversation <span className="btn-icon" aria-hidden="true">↗</span></Link>
             </div>
           </div>
@@ -45,29 +49,12 @@ export default function IdeasFrameworksPage() {
           </div>
         </section>
 
-        <section id="published-ideas" className="section section-alt">
-          <div className="wrap source-empty-state reveal">
-            <div>
-              <h2 className="section-h2">A quiet<br /><em>beginning.</em></h2>
-            </div>
-            <p className="source-empty-copy">There are no published ideas in the source archive yet. This page remains ready for future writing without turning the site into a content repository.</p>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="wrap subscribe-panel reveal">
-            <div>
-              <h2 className="section-h2">Sign up to<br /><em>stay current.</em></h2>
-            </div>
-            <SubscribeForm />
-          </div>
-        </section>
-
         <footer className="wrap site-footer">
           <Link href="/">← Home</Link>
           <div className="social-row" aria-label="Social profiles">
             {socialLinks.map((social) => <a key={social.label} href={social.href} target="_blank" rel="noreferrer">{social.label} <span aria-hidden="true">↗</span></a>)}
           </div>
+          <Link href="/#work">Work</Link>
           <Link href="/sitemap.xml">Sitemap</Link>
           <span>© {new Date().getFullYear()} Abhay Jain</span>
         </footer>

@@ -4,9 +4,18 @@ import { publications, socialLinks, sourceCopy } from './source-data';
 
 /* ── real data from source sites ─────────────────────────────────────────── */
 const focusAreas = [
-  'Business and product strategy across technology, energy, sustainability, and manufacturing.',
-  'Operating across product direction, market adoption, commercial growth, and cross-functional execution.',
-  'Building practical systems and partnerships that make complex ideas useful, adoptable, and durable.',
+  {
+    title: 'Product and business strategy',
+    detail: 'Across technology, energy, sustainability, and manufacturing.',
+  },
+  {
+    title: 'Commercial execution',
+    detail: 'Product direction, market adoption, growth, and cross-functional execution.',
+  },
+  {
+    title: 'Systems and partnerships',
+    detail: 'Making complex ideas useful, adoptable, and durable.',
+  },
 ];
 
 const trackRecord = [
@@ -94,12 +103,17 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Abhay Jain — home">
           <span className="wordmark-badge">AJ</span>
-          <span>Business &amp; Strategy</span>
+          <span className="wordmark-copy">
+            <strong className="wordmark-name">Abhay Jain</strong>
+            <small className="wordmark-role">Business &amp; Strategy</small>
+          </span>
         </a>
         <nav className="site-nav" aria-label="Primary">
+          <Link href="#top" className="nav-active">Home</Link>
+          <span className="nav-dot" aria-hidden="true">·</span>
           <Link href="/about-me">About</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
-          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
+          <Link href="#work">Work</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
           <a href="#focus">Focus</a>
           <span className="nav-dot" aria-hidden="true">·</span>
@@ -179,10 +193,10 @@ export default function Home() {
             </p>
           </div>
           <div className="focus-list">
-            {focusAreas.map((area, i) => (
-              <div className="focus-item" key={i}>
-                <span className="focus-idx">0{i + 1}</span>
-                <p className="focus-text">{area}</p>
+            {focusAreas.map((area) => (
+              <div className="focus-item" key={area.title}>
+                <h3 className="focus-title">{area.title}</h3>
+                <p className="focus-text">{area.detail}</p>
               </div>
             ))}
           </div>
@@ -346,7 +360,7 @@ export default function Home() {
         <footer className="wrap site-footer footer-dark">
           <span>© {new Date().getFullYear()} Abhay Jain</span>
           <Link href="/about-me">About me</Link>
-          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
+          <Link href="/#work">Work</Link>
           <Link href="/contact-me">Contact me</Link>
           <Link href="/sitemap.xml">Sitemap</Link>
           <span>abhayjain.net</span>

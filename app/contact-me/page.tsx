@@ -18,12 +18,17 @@ export default function ContactMePage() {
         <header className="site-header">
           <Link className="wordmark" href="/" aria-label="Business and strategy home">
             <span className="wordmark-badge">AJ</span>
-            <span>Business &amp; Strategy</span>
+            <span className="wordmark-copy">
+              <strong className="wordmark-name">Abhay Jain</strong>
+              <small className="wordmark-role">Business &amp; Strategy</small>
+            </span>
           </Link>
           <nav className="site-nav" aria-label="Primary">
+            <Link href="/">Home</Link>
+            <span className="nav-dot" aria-hidden="true">·</span>
             <Link href="/about-me">About</Link>
             <span className="nav-dot" aria-hidden="true">·</span>
-            <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
+            <Link href="/#work">Work</Link>
             <span className="nav-dot" aria-hidden="true">·</span>
             <Link href="/#focus">Focus</Link>
             <span className="nav-dot" aria-hidden="true">·</span>
@@ -56,7 +61,7 @@ export default function ContactMePage() {
         <footer className="wrap site-footer">
           <Link href="/">← Home</Link>
           <Link href="/about-me">About me</Link>
-          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
+          <Link href="/#work">Work</Link>
           <Link href="/sitemap.xml">Sitemap</Link>
           <span>© {new Date().getFullYear()} Abhay Jain</span>
         </footer>

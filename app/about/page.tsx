@@ -36,12 +36,17 @@ export default function AboutPage() {
       <header className="site-header">
         <Link className="wordmark" href="/" aria-label="Abhay Jain — home">
           <span className="wordmark-badge">AJ</span>
-          <span>Business &amp; Strategy</span>
+          <span className="wordmark-copy">
+            <strong className="wordmark-name">Abhay Jain</strong>
+            <small className="wordmark-role">Business &amp; Strategy</small>
+          </span>
         </Link>
         <nav className="site-nav" aria-label="Primary">
+          <Link href="/">Home</Link>
+          <span className="nav-dot" aria-hidden="true">·</span>
           <Link href="/about-me" className="nav-active">About</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
-          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
+          <Link href="/#work">Work</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
           <Link href="/#focus">Focus</Link>
           <span className="nav-dot" aria-hidden="true">·</span>
@@ -79,15 +84,6 @@ export default function AboutPage() {
               priority
             />
           </figure>
-        </div>
-      </section>
-
-      {/* ── STATEMENT BAND ─────────────────────────────────────────── */}
-      <section className="about-statement">
-        <div className="wrap statement-inner">
-          <p className="statement-text">
-            The work has moved across consulting, energy, technology, and manufacturing — with a consistent focus on making complex systems useful, adoptable, and durable.
-          </p>
         </div>
       </section>
 
@@ -149,19 +145,43 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── STATEMENT BAND ─────────────────────────────────────────── */}
+      <section className="about-statement">
+        <div className="wrap statement-inner">
+          <p className="statement-text">
+            The work has moved across consulting, energy, technology, and manufacturing — with a consistent focus on making complex systems useful, adoptable, and durable.
+          </p>
+        </div>
+      </section>
+
       {/* ── HONORS & PUBLICATIONS ──────────────────────────────────── */}
       <section id="honors" className="section">
         <div className="wrap reveal">
-          <div className="logo-section-header">
+          <div className="logo-section-header recognition-header">
             <h2 className="section-h2">
-              Signals<br />
-              of<br />
-              <em>trust.</em>
+              Recognition<br />
+              and<br />
+              <em>record.</em>
             </h2>
+            <p className="recognition-summary">
+              Scholarships, fellowships, and published work earned across India, Japan, and Stanford.
+            </p>
+          </div>
+
+          {/* Awards */}
+          <h3 className="about-list-heading">Awards &amp; Fellowships</h3>
+          <div className="recognition-grid">
+            {awards.map((item) => (
+              <article className="recognition-item" key={item.title}>
+                <span className="recognition-kind">{item.kind}</span>
+                <h4>{item.title}</h4>
+                <span className="recognition-year">{item.year}</span>
+              </article>
+            ))}
           </div>
 
           {/* Publications */}
-          <h3 className="about-list-heading">Publications &amp; Patents</h3>
+          <h3 className="about-list-heading about-list-heading-spaced">Published work &amp; patents</h3>
           <div className="pub-list pub-list-about">
             {publications.map((item, i) => (
               <a
@@ -177,20 +197,6 @@ export default function AboutPage() {
                 <span className="pub-src">{item.source}</span>
                 <span className="pub-view">View <span aria-hidden="true">↗</span></span>
               </a>
-            ))}
-          </div>
-
-          {/* Awards */}
-          <h3 className="about-list-heading about-list-heading-spaced">Awards &amp; Fellowships</h3>
-          <div className="rec-list">
-            {awards.map((item, i) => (
-              <div className="rec-item" key={item.title}>
-                <span className="rec-idx">0{i + 1}</span>
-                <div>
-                  <p className="rec-text" style={{ fontWeight: 500 }}>{item.title}</p>
-                  {item.note && <p className="rec-text" style={{ color: 'var(--ink-60)', fontSize: '13px', marginTop: '2px' }}>{item.note}</p>}
-                </div>
-              </div>
             ))}
           </div>
         </div>
@@ -214,29 +220,6 @@ export default function AboutPage() {
             <p className="rec-text" style={{ marginBottom: '16px', color: 'var(--ink-60)' }}>
               Outside formal roles: competitive table tennis, pool, golf, road trips, and international dance performances.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SOURCE SITE ADDITIONS ──────────────────────────────────── */}
-      <section className="section">
-        <div className="wrap section-grid reveal">
-          <div>
-            <h2 className="section-h2">
-              More<br />
-              to<br />
-              <em>come.</em>
-            </h2>
-          </div>
-          <div className="source-additions">
-            <article className="source-addition">
-              <h3 className="aff-title">Extra Curricular</h3>
-              <p className="source-addition-status">Coming soon</p>
-            </article>
-            <article className="source-addition">
-              <h3 className="aff-title">Projects</h3>
-              <p className="source-addition-status">Coming soon</p>
-            </article>
           </div>
         </div>
       </section>
@@ -295,7 +278,7 @@ export default function AboutPage() {
         <footer className="wrap site-footer footer-dark">
           <Link href="/">← Home</Link>
           <span>© {new Date().getFullYear()} Abhay Jain</span>
-          <Link href="/ideas-frameworks">Ideas &amp; Frameworks</Link>
+          <Link href="/#work">Work</Link>
           <Link href="/contact-me">Contact me</Link>
           <Link href="/sitemap.xml">Sitemap</Link>
           <span>abhayjain.net</span>
