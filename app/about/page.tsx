@@ -95,7 +95,6 @@ export default function AboutPage() {
       <section id="pedigree" className="section">
         <div className="wrap reveal">
           <div className="logo-section-header">
-            <p className="section-label">Work Experience</p>
             <h2 className="section-h2">
               Operating<br />
               <em>range.</em>
@@ -125,7 +124,6 @@ export default function AboutPage() {
       <section id="education" className="section section-alt">
         <div className="wrap reveal">
           <div className="logo-section-header">
-            <p className="section-label">Education</p>
             <h2 className="section-h2">
               Technical<br />
               <em>grounding.</em>
@@ -155,7 +153,6 @@ export default function AboutPage() {
       <section id="honors" className="section">
         <div className="wrap reveal">
           <div className="logo-section-header">
-            <p className="section-label">Honors & Published Work</p>
             <h2 className="section-h2">
               Signals<br />
               of<br />
@@ -164,7 +161,7 @@ export default function AboutPage() {
           </div>
 
           {/* Publications */}
-          <p className="sub-head">Publications & Patents</p>
+          <h3 className="about-list-heading">Publications &amp; Patents</h3>
           <div className="pub-list pub-list-about">
             {publications.map((item, i) => (
               <a
@@ -184,7 +181,7 @@ export default function AboutPage() {
           </div>
 
           {/* Awards */}
-          <p className="sub-head" style={{ marginTop: '56px' }}>Awards & Fellowships</p>
+          <h3 className="about-list-heading about-list-heading-spaced">Awards &amp; Fellowships</h3>
           <div className="rec-list">
             {awards.map((item, i) => (
               <div className="rec-item" key={item.title}>
@@ -203,7 +200,6 @@ export default function AboutPage() {
       <section className="section section-alt">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-label">Beyond Work</p>
             <h2 className="section-h2">
               Keep a<br />
               wider<br />
@@ -218,7 +214,6 @@ export default function AboutPage() {
             <p className="rec-text" style={{ marginBottom: '16px', color: 'var(--ink-60)' }}>
               Outside formal roles: competitive table tennis, pool, golf, road trips, and international dance performances.
             </p>
-            <p className="beyond-cap">Personal detail, kept in proportion.</p>
           </div>
         </div>
       </section>
@@ -227,7 +222,6 @@ export default function AboutPage() {
       <section className="section">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-label">Some more things about me…</p>
             <h2 className="section-h2">
               More<br />
               to<br />
@@ -236,11 +230,11 @@ export default function AboutPage() {
           </div>
           <div className="source-additions">
             <article className="source-addition">
-              <p className="aff-head">Extra Curricular</p>
+              <h3 className="aff-title">Extra Curricular</h3>
               <p className="source-addition-status">Coming soon</p>
             </article>
             <article className="source-addition">
-              <p className="aff-head">Projects</p>
+              <h3 className="aff-title">Projects</h3>
               <p className="source-addition-status">Coming soon</p>
             </article>
           </div>

@@ -48,7 +48,6 @@ export default function IdeasFrameworksPage() {
         <section id="published-ideas" className="section section-alt">
           <div className="wrap source-empty-state reveal">
             <div>
-              <p className="section-label">Published ideas</p>
               <h2 className="section-h2">A quiet<br /><em>beginning.</em></h2>
             </div>
             <p className="source-empty-copy">There are no published ideas in the source archive yet. This page remains ready for future writing without turning the site into a content repository.</p>

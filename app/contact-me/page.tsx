@@ -47,7 +47,6 @@ export default function ContactMePage() {
         <section className="section section-alt">
           <div className="wrap contact-form-layout reveal">
             <div>
-              <p className="section-label">Contact me</p>
               <h2 className="section-h2">Make the<br /><em>first move.</em></h2>
             </div>
             <ContactForm />

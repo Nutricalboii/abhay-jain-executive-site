@@ -186,7 +186,6 @@ export default function Home() {
       <section id="focus" className="section">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-label">Current Focus</p>
             <h2 className="section-h2">
               Where<br />
               the work<br />
@@ -211,11 +210,10 @@ export default function Home() {
       <section id="track-record" className="section section-alt">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-label">Track Record</p>
             <h2 className="section-h2">
-              Proof,<br />
-              not<br />
-              <em>volume.</em>
+              A record<br />
+              of<br />
+              <em>range.</em>
             </h2>
           </div>
           <div className="track-list">
@@ -237,7 +235,6 @@ export default function Home() {
         <div className="wrap reveal">
           <div className="work-header">
             <div>
-              <p className="section-label">Selected Work</p>
               <h2 className="section-h2">
                 Published<br />
                 <em>record.</em>
@@ -304,7 +301,6 @@ export default function Home() {
       <section className="section section-alt">
         <div className="wrap section-grid reveal">
           <div>
-            <p className="section-label">Roles & Affiliations</p>
             <h2 className="section-h2">
               Built<br />
               across<br />
@@ -313,19 +309,19 @@ export default function Home() {
           </div>
           <div className="aff-grid">
             <div className="aff-block">
-              <p className="aff-head">Current</p>
+              <h3 className="aff-title">Current</h3>
               <ul className="aff-list">
                 {affiliations.current.map((a) => <li key={a}>{a}</li>)}
               </ul>
             </div>
             <div className="aff-block">
-              <p className="aff-head">Earlier</p>
+              <h3 className="aff-title">Earlier</h3>
               <ul className="aff-list">
                 {affiliations.earlier.map((a) => <li key={a}>{a}</li>)}
               </ul>
             </div>
             <div className="aff-block">
-              <p className="aff-head">Education</p>
+              <h3 className="aff-title">Education</h3>
               <ul className="aff-list">
                 {affiliations.education.map((a) => <li key={a}>{a}</li>)}
               </ul>

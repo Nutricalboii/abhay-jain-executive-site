@@ -354,27 +354,6 @@ button:focus-visible {
   align-items: start;
 }
 
-/* Section intro (left col) */
-.section-label {
-  font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--ink-80, rgba(20,24,28,.8));
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-label::before {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 1px;
-  background: var(--copper);
-  flex-shrink: 0;
-}
 .section-h2 {
   font-family: var(--font-display);
   font-size: clamp(38px, 4.2vw, 62px);
@@ -523,14 +502,14 @@ button:focus-visible {
 }
 .aff-block:last-child { border-right: none; }
 .aff-block:first-child { padding-left: 0; }
-.aff-head {
+.aff-title {
   margin-bottom: 16px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--copper);
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -.03em;
+  line-height: 1;
+  color: var(--ink);
 }
 .aff-list {
   list-style: none;
@@ -804,8 +783,6 @@ button:focus-visible {
   line-height: 1.12;
   margin-bottom: 36px;
 }
-.beyond-cap { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-60); }
-
 /* ─── SCROLL-REVEAL (CSS scroll-driven) ──────────────────────────────────── */
 @supports (animation-timeline: view()) {
   .reveal {
@@ -973,15 +950,17 @@ button:focus-visible {
   white-space: nowrap;
 }
 
-/* ── sub-head ───────────────────────────────────────────────────────────── */
-.sub-head {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--ink-35);
-  margin-bottom: 24px;
+/* ── visible list headings ─────────────────────────────────────────────── */
+.about-list-heading {
+  margin: 0 0 24px;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 400;
+  letter-spacing: -.03em;
+  line-height: 1;
+  color: var(--ink);
 }
+.about-list-heading-spaced { margin-top: 56px; }
 
 /* ── pub-list-about (light background) ─────────────────────────────────── */
 .pub-list-about .pub-item {
@@ -1008,8 +987,6 @@ button:focus-visible {
   line-height: 1.45;
   letter-spacing: -.02em;
 }
-.beyond-cap { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-35); }
-
 /* ── responsive logo grid ───────────────────────────────────────────────── */
 @media (max-width: 960px) {
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
