@@ -358,7 +358,6 @@ export default function Home() {
           <div className="contact-side">
             <p className="contact-desc">
               For advisory, operating, technology, energy, sustainability, or institutional conversations.
-              Have a new idea, want to discuss an opportunity, or share thoughts?
             </p>
             <div className="contact-actions">
               <a

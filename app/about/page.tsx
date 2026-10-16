@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About Abhay Jain — Executive Profile',
-  description: 'Career, education, recognitions, and selected publications of Abhay Jain — business and strategy leader across semiconductors, energy, and institutional markets.',
+  description: 'Selected career, education, recognitions, and publications of Abhay Jain across consulting, energy, sustainability, technology, and manufacturing.',
   alternates: { canonical: '/about' },
 };
 
@@ -105,7 +105,7 @@ const awards = [
 function RouteMap() {
   return (
     <div className="route-map" aria-label="Career geography — Himalayan foothills, Japan, United States, India">
-      <svg viewBox="0 0 640 520" fill="none">
+      <svg viewBox="0 0 640 520" fill="none" aria-hidden="true">
         <path className="route-grid" d="M80 130H560M80 260H560M80 390H560" />
         <path className="route-grid" d="M160 60V460M320 60V460M480 60V460" />
         <path className="route-path" d="M96 375C172 335 155 222 245 256C332 288 305 116 400 160C486 200 474 348 552 132" />
@@ -152,7 +152,7 @@ export default function AboutPage() {
           <p className="eyebrow">
             <span className="eyebrow-line" aria-hidden="true" />
             Executive Profile
-            <span className="eyebrow-muted">— Full biography</span>
+            <span className="eyebrow-muted">— Selected profile</span>
           </p>
           <h1 className="about-h1">
             Across<br />
