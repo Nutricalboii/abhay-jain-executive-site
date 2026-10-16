@@ -152,23 +152,6 @@ export default function Home() {
 
       </section>
 
-      {/* ── KALAM HIGHLIGHT ───────────────────────────────────────── */}
-      <section id="kalam-highlight" className="kalam-highlight section-alt">
-        <div className="wrap kalam-highlight-inner reveal">
-          <div className="kalam-highlight-copy">
-            <h2 className="section-h2">With Dr. A.P.J.<br /><em>Abdul Kalam.</em></h2>
-          </div>
-          <figure className="kalam-highlight-image">
-            <Image
-              src="/abhay-kalam.jpg"
-              alt="Abhay Jain with Dr. A.P.J. Abdul Kalam"
-              fill
-              sizes="(max-width: 960px) 100vw, 68vw"
-            />
-          </figure>
-        </div>
-      </section>
-
       {/* ── SOURCE SITE VISUAL ARCHIVE ────────────────────────────── */}
       <section className="source-archive section-alt">
         <div className="wrap source-archive-intro reveal">
@@ -269,8 +252,8 @@ export default function Home() {
       <section id="inbound" className="banner-section">
         <div className="banner-img-wrap">
           <Image
-            src="/Abhay_Jain_banner_pic.jpg"
-            alt="Abhay Jain presenting technical frameworks"
+            src="/abhay-kalam-clean.png"
+            alt="Abhay Jain with Dr. A.P.J. Abdul Kalam"
             fill
             className="banner-img"
             sizes="100vw"

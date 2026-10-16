@@ -245,8 +245,8 @@ export default function AboutPage() {
       <section className="banner-section">
         <div className="banner-img-wrap">
           <Image
-            src="/Abhay_Jain_banner_pic.jpg"
-            alt="Abhay Jain presenting technical frameworks"
+            src="/abhay-kalam-clean.png"
+            alt="Abhay Jain with Dr. A.P.J. Abdul Kalam"
             fill
             className="banner-img"
             sizes="100vw"
